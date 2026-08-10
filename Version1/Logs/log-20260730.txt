@@ -1,0 +1,37 @@
+[2026-07-30 09:24:51 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-07-30 09:24:52 WRN] Failed to determine the https port for redirect.
+[2026-07-30 09:25:14 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-07-30 09:25:15 WRN] Failed to determine the https port for redirect.
+[2026-07-30 09:45:39 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:45:44 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:58:19 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:58:54 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:59:01 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:59:26 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:59:36 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 09:59:43 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 10:11:16 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 10:11:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:37:13 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:37:15 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:37:25 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:44:35 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:44:39 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:44:50 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:44:54 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:44:58 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:48:16 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:48:37 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:48:40 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-07-30 11:49:14 INF] Create_ImeTemp API called. TempName: Abhilash_1, EmpId: 1037
+[2026-07-30 11:49:14 INF] Image validation completed for 10001_page-0001.jpg
+[2026-07-30 11:49:15 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\10001_page-0001.jpg
+[2026-07-30 11:49:15 INF] Database record created successfully. TempName: Abhilash_1, Employee: 1037
+[2026-07-30 11:49:15 INF] Create_ImeTemp API completed successfully.
+[2026-07-30 11:50:53 INF] Update_ImeTemp API called. Template: Abhilash_1##1037
+[2026-07-30 11:50:53 INF] JSON file validation passed. Uploaded File: Abhilash_1.json
+[2026-07-30 11:50:53 INF] Database updated successfully for Template: Abhilash_1##1037
+[2026-07-30 11:50:53 WRN] Old JSON file not found: 
+[2026-07-30 11:50:53 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Abhilash_1.json
+[2026-07-30 11:50:53 INF] Update_ImeTemp completed successfully. Template: Abhilash_1##1037
+[2026-07-30 11:50:54 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]

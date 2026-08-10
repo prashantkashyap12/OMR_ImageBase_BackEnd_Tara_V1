@@ -1,0 +1,209 @@
+[2026-08-05 09:19:21 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-05 09:19:23 WRN] Failed to determine the https port for redirect.
+[2026-08-05 09:28:26 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 09:28:53 INF] Delete template request received. TemplateId: 26422
+[2026-08-05 09:28:53 INF] Deleting template. TemplateId: 26422, FileName: 123##1038
+[2026-08-05 09:28:53 INF] Database record deleted successfully. TemplateId: 26422
+[2026-08-05 09:28:53 WRN] Image file not found. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\CV Raman University.jpg
+[2026-08-05 09:28:53 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\123.json
+[2026-08-05 09:28:53 INF] Delete template completed successfully. TemplateId: 26422
+[2026-08-05 09:30:53 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 09:30:53 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 09:30:53 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 09:30:53 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 09:30:53 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 09:30:53 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 09:31:08 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-05 09:31:08 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-05 09:31:08 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-05 09:31:08 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-05 09:31:20 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 09:31:20 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 09:31:20 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 09:31:20 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 09:31:20 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 09:31:20 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 09:33:29 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 09:33:29 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 09:33:29 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 09:33:29 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 09:33:29 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 09:33:29 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 09:37:52 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 09:37:52 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 09:37:52 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 09:37:52 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 09:37:52 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 09:37:52 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 09:37:52 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 09:37:52 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 09:37:53 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 09:37:53 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 09:37:53 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 09:37:53 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 09:38:12 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 09:38:12 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 09:38:12 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 09:38:12 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 09:38:12 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 09:38:12 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 09:38:15 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 10:01:28 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 10:01:28 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 10:01:28 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 10:01:28 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 10:01:28 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 10:01:28 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 10:28:33 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 12:37:40 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 12:37:40 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 12:37:41 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 12:37:41 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 12:37:41 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 12:37:41 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 14:09:53 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-05 14:09:54 WRN] Failed to determine the https port for redirect.
+[2026-08-05 14:18:40 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:25:26 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:28:43 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:30:02 INF] Create_ImeTemp API called. TempName: asdf, EmpId: 1037
+[2026-08-05 14:30:02 INF] Image validation completed for 106.png
+[2026-08-05 14:30:02 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\106.png
+[2026-08-05 14:30:02 INF] Database record created successfully. TempName: asdf, Employee: 1037
+[2026-08-05 14:30:02 INF] Create_ImeTemp API completed successfully.
+[2026-08-05 14:31:46 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:31:48 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:32:40 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:38:55 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot access child value on Newtonsoft.Json.Linq.JProperty.
+   at Newtonsoft.Json.Linq.JToken.get_Item(Object key)
+   at Version1.Services.OmrProcessingService.<>c__DisplayClass8_0.<AlignWithTemplate>b__0() in D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\Services\OmrProcessingService.cs:line 634
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Version1.Services.OmrProcessingService.AlignWithTemplate(Mat inputImage, JObject template, String SelctImg) in D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\Services\OmrProcessingService.cs:line 619
+   at Version1.Services.OmrProcessingService.ProcessOmrSheet(String imagePath, String templatePath, String imageUrl, Int32 ser, String userName) in D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\Services\OmrProcessingService.cs:line 143
+   at Version1.Controllers.OmrProcessingController.ProcessOmrSheet(String folderPath, String token, Int32 idTemp, Boolean IsSaveDb, Boolean failReScan) in D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\Controllers\OmrProcessingController.cs:line 137
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\Program.cs:line 209
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-05 14:39:05 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:40:16 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:41:40 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 14:41:40 INF] JSON file validation passed. Uploaded File: IOCL.json
+[2026-08-05 14:41:40 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 14:41:40 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 14:41:40 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL.json
+[2026-08-05 14:41:40 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 14:41:40 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:42:44 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 14:42:44 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 14:42:44 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 14:42:44 INF] Old JSON deleted: TempManager/IOCL.json
+[2026-08-05 14:42:44 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 14:42:44 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 14:42:52 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:43:17 INF] Delete template request received. TemplateId: 26438
+[2026-08-05 14:43:17 INF] Deleting template. TemplateId: 26438, FileName: asdf##1037
+[2026-08-05 14:43:17 INF] Database record deleted successfully. TemplateId: 26438
+[2026-08-05 14:43:17 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\106.png
+[2026-08-05 14:43:17 INF] Delete template completed successfully. TemplateId: 26438
+[2026-08-05 14:45:47 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:45:49 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:45:57 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:45:59 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:48:10 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:48:12 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:50:37 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:50:40 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 14:56:55 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 15:03:59 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 15:04:08 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 15:05:19 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-05 15:05:21 WRN] Failed to determine the https port for redirect.
+[2026-08-05 15:15:34 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-05 15:15:36 WRN] Failed to determine the https port for redirect.
+[2026-08-05 15:19:03 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 15:19:04 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 15:31:12 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-05 16:12:37 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 16:12:37 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 16:12:37 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 16:12:37 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 16:12:37 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 16:12:37 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 16:57:12 INF] Update_ImeTemp API called. Template: IOCL##1044
+[2026-08-05 16:57:12 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 16:57:12 WRN] Template not found in database. FileName: IOCL##1044
+[2026-08-05 16:57:12 WRN] Update_ImeTemp failed. Template: IOCL##1044
+[2026-08-05 16:57:34 INF] Update_ImeTemp API called. Template: IOCL##1044
+[2026-08-05 16:57:34 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 16:57:34 WRN] Template not found in database. FileName: IOCL##1044
+[2026-08-05 16:57:34 WRN] Update_ImeTemp failed. Template: IOCL##1044
+[2026-08-05 16:59:47 INF] Update_ImeTemp API called. Template: Amit Bhadana##1044
+[2026-08-05 16:59:47 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-05 16:59:47 WRN] Template not found in database. FileName: Amit Bhadana##1044
+[2026-08-05 16:59:47 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1044
+[2026-08-05 16:59:59 INF] Update_ImeTemp API called. Template: new##1044
+[2026-08-05 16:59:59 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-05 16:59:59 WRN] Template not found in database. FileName: new##1044
+[2026-08-05 16:59:59 WRN] Update_ImeTemp failed. Template: new##1044
+[2026-08-05 17:00:20 INF] Create_ImeTemp API called. TempName: Yanshika Test Schema, EmpId: 1044
+[2026-08-05 17:00:20 INF] Image validation completed for 00016 2022.02.17 12.33.111A (1) - Copy - Copy - Copy - Copy - Copy - Copy(2)(1).jpg
+[2026-08-05 17:00:20 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\00016 2022.02.17 12.33.111A (1) - Copy - Copy - Copy - Copy - Copy - Copy(2)(1).jpg
+[2026-08-05 17:00:20 INF] Database record created successfully. TempName: Yanshika Test Schema, Employee: 1044
+[2026-08-05 17:00:20 INF] Create_ImeTemp API completed successfully.
+[2026-08-05 17:02:00 INF] Update_ImeTemp API called. Template: Yanshika Test Schema##1044
+[2026-08-05 17:02:00 INF] JSON file validation passed. Uploaded File: Yanshika Test Schema##1044.json
+[2026-08-05 17:02:00 INF] Database updated successfully for Template: Yanshika Test Schema##1044
+[2026-08-05 17:02:00 WRN] Old JSON file not found: 
+[2026-08-05 17:02:00 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Yanshika Test Schema##1044.json
+[2026-08-05 17:02:00 INF] Update_ImeTemp completed successfully. Template: Yanshika Test Schema##1044
+[2026-08-05 17:02:04 INF] Update_ImeTemp API called. Template: Yanshika Test Schema##1044
+[2026-08-05 17:02:04 INF] JSON file validation passed. Uploaded File: Yanshika Test Schema##1044.json
+[2026-08-05 17:02:04 INF] Database updated successfully for Template: Yanshika Test Schema##1044
+[2026-08-05 17:02:05 INF] Old JSON deleted: TempManager/Yanshika Test Schema##1044.json
+[2026-08-05 17:02:05 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Yanshika Test Schema##1044.json
+[2026-08-05 17:02:05 INF] Update_ImeTemp completed successfully. Template: Yanshika Test Schema##1044
+[2026-08-05 17:10:18 INF] Update_ImeTemp API called. Template: Yanshika Test Schema##1044
+[2026-08-05 17:10:18 INF] JSON file validation passed. Uploaded File: Yanshika Test Schema##1044.json
+[2026-08-05 17:10:18 INF] Database updated successfully for Template: Yanshika Test Schema##1044
+[2026-08-05 17:10:18 INF] Old JSON deleted: TempManager/Yanshika Test Schema##1044.json
+[2026-08-05 17:10:18 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Yanshika Test Schema##1044.json
+[2026-08-05 17:10:18 INF] Update_ImeTemp completed successfully. Template: Yanshika Test Schema##1044
+[2026-08-05 17:10:29 INF] Update_ImeTemp API called. Template: Yanshika Test Schema##1044
+[2026-08-05 17:10:29 INF] JSON file validation passed. Uploaded File: Yanshika Test Schema##1044.json
+[2026-08-05 17:10:29 INF] Database updated successfully for Template: Yanshika Test Schema##1044
+[2026-08-05 17:10:29 INF] Old JSON deleted: TempManager/Yanshika Test Schema##1044.json
+[2026-08-05 17:10:29 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Yanshika Test Schema##1044.json
+[2026-08-05 17:10:29 INF] Update_ImeTemp completed successfully. Template: Yanshika Test Schema##1044
+[2026-08-05 17:23:42 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 17:23:42 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 17:23:42 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 17:23:42 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 17:23:42 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 17:23:42 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 17:23:49 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-05 17:23:49 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-05 17:23:49 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-05 17:23:49 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-05 17:23:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-05 17:23:49 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-05 17:23:57 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-05 17:23:57 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-05 17:23:57 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-05 17:23:57 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037

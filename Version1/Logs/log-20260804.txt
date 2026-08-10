@@ -1,0 +1,249 @@
+[2026-08-04 09:34:48 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-04 09:34:49 WRN] Failed to determine the https port for redirect.
+[2026-08-04 10:13:46 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 10:31:13 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 10:31:13 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 10:31:13 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 10:31:13 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 10:31:13 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 10:31:13 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 10:40:08 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 10:40:08 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 10:40:08 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 10:40:08 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 10:40:08 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 10:40:08 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 10:41:53 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 10:41:53 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 10:41:53 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 10:41:53 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 10:41:53 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 10:41:53 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 10:52:29 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 10:53:14 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 11:03:53 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 11:21:26 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 11:41:21 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 11:42:36 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-04 12:11:10 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-04 12:11:10 WRN] Failed to determine the https port for redirect.
+[2026-08-04 12:13:11 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:13:11 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:13:11 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:13:11 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:13:11 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:13:11 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:13:55 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:13:55 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:13:55 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:13:55 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:13:56 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:13:56 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:14:47 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:14:47 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:14:47 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:14:47 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:14:47 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:14:47 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:18:27 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:18:27 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:18:27 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:18:27 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:18:27 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:18:27 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:18:34 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:18:34 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:18:34 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:18:34 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:18:34 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:18:34 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:20:24 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-04 12:20:25 WRN] Failed to determine the https port for redirect.
+[2026-08-04 12:26:13 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:26:13 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:26:13 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:26:13 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:26:13 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:26:13 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:28:47 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:28:47 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:28:47 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:28:47 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:28:47 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:28:47 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:29:19 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:29:19 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:29:19 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:29:19 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:29:19 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:29:19 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:41:25 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:41:25 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:41:25 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:41:25 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:41:25 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:41:25 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:52:24 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:52:24 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:52:24 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:52:24 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:52:24 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:52:24 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:52:36 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:52:36 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:52:36 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:52:36 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:52:36 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:52:36 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 12:57:08 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 12:57:08 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 12:57:08 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 12:57:08 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 12:57:08 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 12:57:08 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 13:40:59 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 13:40:59 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 13:40:59 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 13:40:59 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 13:40:59 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 13:40:59 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 13:53:17 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 13:53:17 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 13:53:17 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 13:53:17 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 13:53:17 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 13:53:17 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 13:58:46 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 13:58:46 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 13:58:47 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 13:58:47 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 13:58:47 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 13:58:47 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 14:00:42 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 14:00:42 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 14:00:42 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 14:00:42 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 14:00:42 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 14:00:42 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 14:15:49 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 14:15:49 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 14:15:49 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 14:15:49 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 14:15:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 14:15:49 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 14:16:38 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 14:16:38 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 14:16:38 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 14:16:38 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 14:16:38 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 14:16:38 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 14:17:38 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 14:17:38 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 14:17:38 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 14:17:38 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 14:17:38 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 14:17:38 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 14:17:48 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 14:17:48 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 14:17:49 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 14:17:49 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 14:17:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 14:17:49 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 15:23:03 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 15:23:03 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 15:23:03 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 15:23:03 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 15:23:03 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 15:23:03 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 15:24:27 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 15:24:27 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 15:24:27 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 15:24:27 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 15:24:27 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 15:24:27 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 15:25:03 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 15:25:03 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 15:25:03 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 15:25:03 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 15:25:03 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 15:25:03 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 15:39:13 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 15:39:13 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 15:39:13 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 15:39:13 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 15:39:13 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 15:39:13 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:08:58 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:08:58 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:08:58 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:08:58 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:08:58 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:08:58 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:15:31 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:15:31 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:15:31 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:15:31 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:15:31 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:15:31 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:24:18 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:24:18 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:24:18 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:24:18 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:24:18 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:24:18 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:27:35 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:27:35 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:27:35 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:27:35 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:27:35 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:27:35 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:28:11 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:28:11 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:28:11 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:28:11 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:28:11 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:28:11 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:33:34 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:33:34 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:33:34 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:33:34 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:33:34 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:33:34 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:49:15 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:49:15 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:49:15 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:49:15 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:49:15 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:49:15 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:58:08 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:58:08 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:58:08 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:58:08 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:58:08 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:58:08 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 16:59:10 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 16:59:10 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 16:59:10 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 16:59:10 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 16:59:10 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 16:59:10 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 17:13:11 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 17:13:11 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 17:13:11 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 17:13:11 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 17:13:11 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 17:13:11 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 17:14:29 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 17:14:29 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 17:14:29 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 17:14:29 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 17:14:29 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 17:14:29 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-04 17:45:05 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-04 17:45:06 WRN] Failed to determine the https port for redirect.
+[2026-08-04 18:10:11 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-04 18:10:11 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-04 18:10:12 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-04 18:10:12 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-04 18:10:12 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-04 18:10:12 INF] Update_ImeTemp completed successfully. Template: IOCL##1037

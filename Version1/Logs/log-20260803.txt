@@ -1,0 +1,682 @@
+[2026-08-03 09:18:08 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 09:18:09 WRN] Failed to determine the https port for redirect.
+[2026-08-03 10:50:34 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 11:02:35 ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/auth/qr/create" for actions - SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner),SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:03:15 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:04:09 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:04:17 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:05:16 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:06:10 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:06:18 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:07:16 ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/auth/qr/create" for actions - SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner),SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:07:17 ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:07:25 ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/auth/qr/create" for actions - SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner),SQCScanner.Controllers.LoginController.CreateQrSession (SQCScanner). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 11:08:28 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 11:08:29 WRN] Failed to determine the https port for redirect.
+[2026-08-03 11:48:16 INF] Update_ImeTemp API called. Template: TEST##1037
+[2026-08-03 11:48:16 INF] JSON file validation passed. Uploaded File: TEST##1037.json
+[2026-08-03 11:48:17 INF] Database updated successfully for Template: TEST##1037
+[2026-08-03 11:48:17 INF] Old JSON deleted: TempManager/TEST##1037.json
+[2026-08-03 11:48:17 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST##1037.json
+[2026-08-03 11:48:17 INF] Update_ImeTemp completed successfully. Template: TEST##1037
+[2026-08-03 12:14:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:14:25 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:14:55 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:15:24 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:15:58 INF] Update_ImeTemp API called. Template: TEST##1037
+[2026-08-03 12:15:58 INF] JSON file validation passed. Uploaded File: TEST.json
+[2026-08-03 12:15:58 INF] Database updated successfully for Template: TEST##1037
+[2026-08-03 12:15:58 INF] Old JSON deleted: TempManager/TEST##1037.json
+[2026-08-03 12:15:58 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST.json
+[2026-08-03 12:15:58 INF] Update_ImeTemp completed successfully. Template: TEST##1037
+[2026-08-03 12:15:59 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:23:09 INF] Update_ImeTemp API called. Template: TEST##1037
+[2026-08-03 12:23:09 INF] JSON file validation passed. Uploaded File: TEST##1037.json
+[2026-08-03 12:23:09 INF] Database updated successfully for Template: TEST##1037
+[2026-08-03 12:23:09 INF] Old JSON deleted: TempManager/TEST.json
+[2026-08-03 12:23:09 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST##1037.json
+[2026-08-03 12:23:09 INF] Update_ImeTemp completed successfully. Template: TEST##1037
+[2026-08-03 12:26:52 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:27:03 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:27:04 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:27:30 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:27:35 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:27:43 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:27:54 INF] Delete template request received. TemplateId: 26429
+[2026-08-03 12:27:54 INF] Deleting template. TemplateId: 26429, FileName: IOCL##1037
+[2026-08-03 12:27:54 INF] Database record deleted successfully. TemplateId: 26429
+[2026-08-03 12:27:54 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-03 12:27:54 INF] Delete template completed successfully. TemplateId: 26429
+[2026-08-03 12:28:15 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:28:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:28:19 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 12:31:57 INF] Update_ImeTemp API called. Template: TEST##1037
+[2026-08-03 12:31:57 INF] JSON file validation passed. Uploaded File: TEST##1037.json
+[2026-08-03 12:31:57 INF] Database updated successfully for Template: TEST##1037
+[2026-08-03 12:31:57 INF] Old JSON deleted: TempManager/TEST##1037.json
+[2026-08-03 12:31:57 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST##1037.json
+[2026-08-03 12:31:57 INF] Update_ImeTemp completed successfully. Template: TEST##1037
+[2026-08-03 12:35:03 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 12:35:03 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 12:35:03 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 12:35:03 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 12:35:43 INF] Update_ImeTemp API called. Template: TEST##1037
+[2026-08-03 12:35:43 INF] JSON file validation passed. Uploaded File: TEST##1037.json
+[2026-08-03 12:35:43 INF] Database updated successfully for Template: TEST##1037
+[2026-08-03 12:35:43 INF] Old JSON deleted: TempManager/TEST##1037.json
+[2026-08-03 12:35:43 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST##1037.json
+[2026-08-03 12:35:43 INF] Update_ImeTemp completed successfully. Template: TEST##1037
+[2026-08-03 12:36:45 INF] Update_ImeTemp API called. Template: asdfasdf##1037
+[2026-08-03 12:36:45 INF] JSON file validation passed. Uploaded File: asdfasdf##1038.json
+[2026-08-03 12:36:45 WRN] Template not found in database. FileName: asdfasdf##1037
+[2026-08-03 12:36:45 WRN] Update_ImeTemp failed. Template: asdfasdf##1037
+[2026-08-03 12:37:05 INF] Update_ImeTemp API called. Template: TEST##1037
+[2026-08-03 12:37:05 INF] JSON file validation passed. Uploaded File: TEST##1037.json
+[2026-08-03 12:37:05 INF] Database updated successfully for Template: TEST##1037
+[2026-08-03 12:37:05 INF] Old JSON deleted: TempManager/TEST##1037.json
+[2026-08-03 12:37:05 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST##1037.json
+[2026-08-03 12:37:05 INF] Update_ImeTemp completed successfully. Template: TEST##1037
+[2026-08-03 12:37:49 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:37:49 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:37:49 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:37:49 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:40:49 INF] Delete template request received. TemplateId: 26423
+[2026-08-03 12:40:49 INF] Deleting template. TemplateId: 26423, FileName: asdfasdf##1038
+[2026-08-03 12:40:49 INF] Database record deleted successfully. TemplateId: 26423
+[2026-08-03 12:40:49 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\CV Raman University.jpg
+[2026-08-03 12:40:49 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\asdfasdf.json
+[2026-08-03 12:40:49 INF] Delete template completed successfully. TemplateId: 26423
+[2026-08-03 12:41:00 INF] Update_ImeTemp API called. Template: 123##1037
+[2026-08-03 12:41:00 INF] JSON file validation passed. Uploaded File: 123##1038.json
+[2026-08-03 12:41:00 WRN] Template not found in database. FileName: 123##1037
+[2026-08-03 12:41:00 WRN] Update_ImeTemp failed. Template: 123##1037
+[2026-08-03 12:46:06 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 12:46:06 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 12:46:06 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 12:46:06 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 12:47:54 INF] Delete template request received. TemplateId: 26416
+[2026-08-03 12:47:54 INF] Deleting template. TemplateId: 26416, FileName: TEST##1037
+[2026-08-03 12:47:54 INF] Database record deleted successfully. TemplateId: 26416
+[2026-08-03 12:47:54 WRN] Image file not found. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-03 12:47:54 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\TEST##1037.json
+[2026-08-03 12:47:54 INF] Delete template completed successfully. TemplateId: 26416
+[2026-08-03 12:48:58 INF] Create_ImeTemp API called. TempName: Test, EmpId: 1037
+[2026-08-03 12:48:58 INF] Image validation completed for IOCL.jpg
+[2026-08-03 12:48:58 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-03 12:48:59 INF] Database record created successfully. TempName: Test, Employee: 1037
+[2026-08-03 12:48:59 INF] Create_ImeTemp API completed successfully.
+[2026-08-03 12:49:25 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 12:49:25 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 12:49:25 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 12:49:25 WRN] Old JSON file not found: 
+[2026-08-03 12:49:25 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 12:49:25 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 12:51:35 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:51:35 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:51:35 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:51:35 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:51:49 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:51:49 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:51:49 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:51:49 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:52:02 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 12:52:02 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 12:52:02 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 12:52:02 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 12:52:02 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 12:52:02 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 12:52:12 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 12:52:12 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 12:52:12 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 12:52:12 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 12:52:12 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 12:52:12 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 12:53:50 INF] Update_ImeTemp API called. Template: OSM Testing Template##1037
+[2026-08-03 12:53:50 INF] JSON file validation passed. Uploaded File: OSM Testing Template.json
+[2026-08-03 12:53:50 WRN] Template not found in database. FileName: OSM Testing Template##1037
+[2026-08-03 12:53:50 WRN] Update_ImeTemp failed. Template: OSM Testing Template##1037
+[2026-08-03 12:54:04 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 12:54:04 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 12:54:04 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 12:54:04 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 12:55:59 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 12:55:59 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 12:55:59 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 12:55:59 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 12:55:59 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 12:55:59 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 12:56:05 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:56:05 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:56:05 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:56:05 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:56:09 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:56:09 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:56:09 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:56:09 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:56:46 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:56:46 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:56:46 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:56:46 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:57:02 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:57:02 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:57:02 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:57:02 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:57:55 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:57:55 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:57:55 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:57:55 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:58:11 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:58:11 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:58:11 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:58:11 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 12:59:09 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 12:59:09 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 12:59:09 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 12:59:09 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:02:29 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 13:02:31 WRN] Failed to determine the https port for redirect.
+[2026-08-03 13:33:48 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:33:48 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:33:48 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:33:48 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:33:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:33:49 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:34:09 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:34:09 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:34:09 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:34:09 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:34:16 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:34:16 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:34:16 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:34:16 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:35:16 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:35:16 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:35:16 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:35:16 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:35:49 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:35:49 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:35:49 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:35:49 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:36:06 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:36:06 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:36:06 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:36:06 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:36:20 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:36:20 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:36:20 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:36:20 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:36:20 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:36:20 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:37:17 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:37:17 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:37:17 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:37:17 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:37:17 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:37:17 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:37:31 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:37:31 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:37:31 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:37:31 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:38:08 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:38:08 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:38:08 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:38:08 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:39:36 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:39:36 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:39:36 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:39:36 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:39:52 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:39:52 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:39:52 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:39:52 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:40:14 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:40:14 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:40:14 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:40:14 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:40:17 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:40:17 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:40:17 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:40:17 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:40:35 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:40:35 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:40:35 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:40:35 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:40:41 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:40:41 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:40:41 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:40:41 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:42:01 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:42:01 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:42:01 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:42:01 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:42:46 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:42:46 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:42:46 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:42:46 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:43:20 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:43:20 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:43:20 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:43:20 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:44:11 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:44:11 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:44:11 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:44:11 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:46:10 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 13:46:12 WRN] Failed to determine the https port for redirect.
+[2026-08-03 13:47:06 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:47:06 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:47:06 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:47:06 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:47:06 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:47:06 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:47:21 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:47:21 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:47:21 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:47:21 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:51:02 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:51:02 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:51:02 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:51:02 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:52:55 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:52:55 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:52:55 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:52:55 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:52:58 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:52:58 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:52:58 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:52:58 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:20 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:20 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:20 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:20 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:20 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:20 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:20 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:20 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:23 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:23 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:23 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:23 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:24 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:24 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:24 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:24 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:26 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:26 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:26 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:26 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:27 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:27 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:27 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:27 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:38 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:38 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:38 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:38 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:40 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:40 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:40 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:40 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:40 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:40 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:40 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:40 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:41 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:41 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:41 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:41 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:42 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:53:42 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:53:42 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:53:42 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:53:49 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:53:49 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:53:49 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:53:49 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:53:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:53:49 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:53:51 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:53:51 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:53:51 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:53:51 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:53:51 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:53:51 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:53:52 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 13:53:52 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 13:53:52 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 13:53:52 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 13:53:52 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 13:53:52 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 13:54:02 INF] Update_ImeTemp API called. Template: 123##1037
+[2026-08-03 13:54:02 INF] JSON file validation passed. Uploaded File: 123##1038.json
+[2026-08-03 13:54:02 WRN] Template not found in database. FileName: 123##1037
+[2026-08-03 13:54:02 WRN] Update_ImeTemp failed. Template: 123##1037
+[2026-08-03 13:54:04 INF] Update_ImeTemp API called. Template: 123##1037
+[2026-08-03 13:54:04 INF] JSON file validation passed. Uploaded File: 123##1038.json
+[2026-08-03 13:54:04 WRN] Template not found in database. FileName: 123##1037
+[2026-08-03 13:54:04 WRN] Update_ImeTemp failed. Template: 123##1037
+[2026-08-03 13:55:30 INF] Update_ImeTemp API called. Template: 123##1037
+[2026-08-03 13:55:30 INF] JSON file validation passed. Uploaded File: 123##1038.json
+[2026-08-03 13:55:30 WRN] Template not found in database. FileName: 123##1037
+[2026-08-03 13:55:30 WRN] Update_ImeTemp failed. Template: 123##1037
+[2026-08-03 13:56:05 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:56:05 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:56:05 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:56:05 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:56:33 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:56:33 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:56:33 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:56:33 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:56:40 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:56:40 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:56:40 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:56:40 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:56:40 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:56:40 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:56:40 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:56:40 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:56:43 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:56:43 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:56:43 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:56:43 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:58:15 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:58:15 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:58:15 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:58:15 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 13:58:23 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:58:23 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:58:23 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:58:23 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:58:29 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 13:58:29 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 13:58:29 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 13:58:29 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 13:58:36 INF] Update_ImeTemp API called. Template: Sundharam TEST##1037
+[2026-08-03 13:58:36 INF] JSON file validation passed. Uploaded File: Sundharam TEST##1037.json
+[2026-08-03 13:58:36 INF] Database updated successfully for Template: Sundharam TEST##1037
+[2026-08-03 13:58:36 INF] Old JSON deleted: TempManager/Sundharam TEST.json
+[2026-08-03 13:58:36 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Sundharam TEST##1037.json
+[2026-08-03 13:58:36 INF] Update_ImeTemp completed successfully. Template: Sundharam TEST##1037
+[2026-08-03 13:59:53 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 13:59:53 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 13:59:53 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 13:59:53 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:00:07 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 14:00:07 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 14:00:07 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 14:00:07 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:00:17 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 14:00:17 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 14:00:17 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 14:00:17 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 14:00:17 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 14:00:17 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 14:01:21 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 14:01:21 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 14:01:21 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 14:01:21 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 14:01:21 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 14:01:21 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 14:01:31 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 14:01:31 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 14:01:31 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 14:01:31 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 14:01:31 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 14:01:31 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 14:01:43 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 14:01:43 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 14:01:43 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 14:01:43 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:02:09 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 14:02:09 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 14:02:09 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 14:02:09 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:06:37 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-03 14:06:37 INF] JSON file validation passed. Uploaded File: Test##1037.json
+[2026-08-03 14:06:37 INF] Database updated successfully for Template: Test##1037
+[2026-08-03 14:06:37 INF] Old JSON deleted: TempManager/Test##1037.json
+[2026-08-03 14:06:37 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 14:06:37 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-03 14:06:52 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 14:06:52 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 14:06:52 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 14:06:52 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 14:07:04 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 14:07:04 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 14:07:04 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 14:07:04 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 14:07:22 INF] Delete template request received. TemplateId: 26436
+[2026-08-03 14:07:22 INF] Deleting template. TemplateId: 26436, FileName: Test##1037
+[2026-08-03 14:07:22 INF] Database record deleted successfully. TemplateId: 26436
+[2026-08-03 14:07:22 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-03 14:07:22 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test##1037.json
+[2026-08-03 14:07:22 INF] Delete template completed successfully. TemplateId: 26436
+[2026-08-03 14:07:25 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 14:07:25 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 14:07:25 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 14:07:25 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 14:07:31 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 14:07:31 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 14:07:31 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 14:07:31 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 14:07:35 INF] Update_ImeTemp API called. Template: Testset1##1037
+[2026-08-03 14:07:35 INF] JSON file validation passed. Uploaded File: Testset1.json
+[2026-08-03 14:07:35 WRN] Template not found in database. FileName: Testset1##1037
+[2026-08-03 14:07:35 WRN] Update_ImeTemp failed. Template: Testset1##1037
+[2026-08-03 14:07:40 INF] Update_ImeTemp API called. Template: Cgpsc_Testing##1037
+[2026-08-03 14:07:40 INF] JSON file validation passed. Uploaded File: Cgpsc_Testing##1037.json
+[2026-08-03 14:07:40 INF] Database updated successfully for Template: Cgpsc_Testing##1037
+[2026-08-03 14:07:40 INF] Old JSON deleted: TempManager/Cgpsc_Testing.json
+[2026-08-03 14:07:40 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Cgpsc_Testing##1037.json
+[2026-08-03 14:07:40 INF] Update_ImeTemp completed successfully. Template: Cgpsc_Testing##1037
+[2026-08-03 14:07:44 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 14:07:44 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 14:07:44 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 14:07:44 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:07:54 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 14:07:54 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 14:07:54 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 14:07:54 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:07:58 INF] Update_ImeTemp API called. Template: Sundharam TEST##1037
+[2026-08-03 14:07:58 INF] JSON file validation passed. Uploaded File: Sundharam TEST##1037.json
+[2026-08-03 14:07:58 INF] Database updated successfully for Template: Sundharam TEST##1037
+[2026-08-03 14:07:58 INF] Old JSON deleted: TempManager/Sundharam TEST##1037.json
+[2026-08-03 14:07:58 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Sundharam TEST##1037.json
+[2026-08-03 14:07:58 INF] Update_ImeTemp completed successfully. Template: Sundharam TEST##1037
+[2026-08-03 14:08:04 INF] Update_ImeTemp API called. Template: Cgpsc_Testing##1037
+[2026-08-03 14:08:04 INF] JSON file validation passed. Uploaded File: Cgpsc_Testing##1037.json
+[2026-08-03 14:08:04 INF] Database updated successfully for Template: Cgpsc_Testing##1037
+[2026-08-03 14:08:04 INF] Old JSON deleted: TempManager/Cgpsc_Testing##1037.json
+[2026-08-03 14:08:04 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Cgpsc_Testing##1037.json
+[2026-08-03 14:08:04 INF] Update_ImeTemp completed successfully. Template: Cgpsc_Testing##1037
+[2026-08-03 14:08:07 INF] Update_ImeTemp API called. Template: 123##1037
+[2026-08-03 14:08:07 INF] JSON file validation passed. Uploaded File: 123##1038.json
+[2026-08-03 14:08:07 WRN] Template not found in database. FileName: 123##1037
+[2026-08-03 14:08:07 WRN] Update_ImeTemp failed. Template: 123##1037
+[2026-08-03 14:08:12 INF] Update_ImeTemp API called. Template: Abhilash_1##1037
+[2026-08-03 14:08:12 INF] JSON file validation passed. Uploaded File: Abhilash_1##1037.json
+[2026-08-03 14:08:12 INF] Database updated successfully for Template: Abhilash_1##1037
+[2026-08-03 14:08:12 INF] Old JSON deleted: TempManager/Abhilash_1.json
+[2026-08-03 14:08:12 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Abhilash_1##1037.json
+[2026-08-03 14:08:12 INF] Update_ImeTemp completed successfully. Template: Abhilash_1##1037
+[2026-08-03 14:08:18 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 14:08:18 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 14:08:18 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 14:08:18 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 14:10:59 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-03 14:10:59 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-03 14:10:59 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-03 14:10:59 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-03 14:11:41 INF] Update_ImeTemp API called. Template: new##1037
+[2026-08-03 14:11:41 INF] JSON file validation passed. Uploaded File: new##1038.json
+[2026-08-03 14:11:41 WRN] Template not found in database. FileName: new##1037
+[2026-08-03 14:11:41 WRN] Update_ImeTemp failed. Template: new##1037
+[2026-08-03 14:12:19 INF] Create_ImeTemp API called. TempName: IOCL, EmpId: 1037
+[2026-08-03 14:12:19 INF] Image validation completed for IOCL.jpg
+[2026-08-03 14:12:19 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-03 14:12:19 INF] Database record created successfully. TempName: IOCL, Employee: 1037
+[2026-08-03 14:12:19 INF] Create_ImeTemp API completed successfully.
+[2026-08-03 14:12:30 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-03 14:12:30 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-03 14:12:30 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-03 14:12:30 WRN] Old JSON file not found: 
+[2026-08-03 14:12:30 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-03 14:12:30 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-03 14:25:48 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-03 14:25:48 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-03 14:25:48 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-03 14:25:48 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-03 14:25:48 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-03 14:25:48 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-03 14:45:55 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 14:49:13 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 14:49:13 WRN] Failed to determine the https port for redirect.
+[2026-08-03 14:50:40 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 14:50:41 WRN] Failed to determine the https port for redirect.
+[2026-08-03 14:56:13 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 15:30:08 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-03 15:30:08 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-03 15:30:09 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-03 15:30:09 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-03 15:30:09 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-03 15:30:09 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-03 15:32:33 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 15:35:24 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-03 15:35:24 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-03 15:35:24 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-03 15:35:24 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-03 15:35:25 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-03 15:35:25 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-03 15:36:57 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 15:36:58 WRN] Failed to determine the https port for redirect.
+[2026-08-03 15:48:41 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 15:48:42 WRN] Failed to determine the https port for redirect.
+[2026-08-03 15:59:29 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 15:59:29 WRN] Failed to determine the https port for redirect.
+[2026-08-03 16:06:59 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 16:07:00 WRN] Failed to determine the https port for redirect.
+[2026-08-03 16:09:03 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 16:09:05 WRN] Failed to determine the https port for redirect.
+[2026-08-03 16:13:04 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 16:13:06 WRN] Failed to determine the https port for redirect.
+[2026-08-03 16:34:51 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-08-03 16:34:51 WRN] The response has already started, the error page middleware will not be executed.
+[2026-08-03 16:34:51 ERR] Connection id "0HNNH9FVTH17T", Request id "0HNNH9FVTH17T:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+[2026-08-03 17:15:57 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 17:32:12 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-03 17:45:46 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 17:45:46 WRN] Failed to determine the https port for redirect.
+[2026-08-03 17:46:24 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 17:46:24 WRN] Failed to determine the https port for redirect.
+[2026-08-03 17:49:12 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-03 17:49:14 WRN] Failed to determine the https port for redirect.

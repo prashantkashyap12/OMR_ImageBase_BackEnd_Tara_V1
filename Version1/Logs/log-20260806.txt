@@ -1,0 +1,350 @@
+[2026-08-06 10:11:31 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-06 10:11:32 WRN] Failed to determine the https port for redirect.
+[2026-08-06 10:13:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:16:12 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:16:26 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:16:28 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:17:29 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:19:44 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:24:42 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:25:30 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:25:30 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:25:32 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:25:49 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:25:50 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method199(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:42:49 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-06 10:42:51 WRN] Failed to determine the https port for redirect.
+[2026-08-06 10:42:59 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:43:14 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:43:14 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:43:15 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:44:01 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:44:03 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:44:06 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:44:06 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:44:10 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:44:13 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:44:13 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:44:14 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:44:34 INF] Create_ImeTemp API called. TempName: Test, EmpId: 1037
+[2026-08-06 10:44:34 INF] Image validation completed for Bitmap.jpg
+[2026-08-06 10:44:34 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\Bitmap.jpg
+[2026-08-06 10:44:34 INF] Database record created successfully. TempName: Test, Employee: 1037
+[2026-08-06 10:44:34 INF] Create_ImeTemp API completed successfully.
+[2026-08-06 10:45:33 INF] Update_ImeTemp API called. Template: Test##1037
+[2026-08-06 10:45:33 INF] JSON file validation passed. Uploaded File: Test.json
+[2026-08-06 10:45:33 INF] Database updated successfully for Template: Test##1037
+[2026-08-06 10:45:33 WRN] Old JSON file not found: 
+[2026-08-06 10:45:33 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test.json
+[2026-08-06 10:45:33 INF] Update_ImeTemp completed successfully. Template: Test##1037
+[2026-08-06 10:45:34 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:45:39 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:47:23 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:47:27 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:47:28 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:47:29 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:47:33 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:47:35 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:52:02 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:52:53 ERR] An exception occurred while iterating over the results of a query for context type 'Version1.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method176(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2026-08-06 10:54:21 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:54:22 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:54:34 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:54:39 INF] Delete template request received. TemplateId: 26437
+[2026-08-06 10:54:39 INF] Deleting template. TemplateId: 26437, FileName: IOCL##1037
+[2026-08-06 10:54:39 INF] Database record deleted successfully. TemplateId: 26437
+[2026-08-06 10:54:39 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-06 10:54:39 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-06 10:54:39 INF] Delete template completed successfully. TemplateId: 26437
+[2026-08-06 10:55:39 INF] Update_ImeTemp API called. Template: Amit Bhadana##1039
+[2026-08-06 10:55:39 INF] JSON file validation passed. Uploaded File: Amit Bhadana.json
+[2026-08-06 10:55:39 INF] Database updated successfully for Template: Amit Bhadana##1039
+[2026-08-06 10:55:39 INF] Old JSON deleted: TempManager/Amit Bhadana.json
+[2026-08-06 10:55:39 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Amit Bhadana.json
+[2026-08-06 10:55:39 INF] Update_ImeTemp completed successfully. Template: Amit Bhadana##1039
+[2026-08-06 10:55:39 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:55:47 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:56:00 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 10:56:10 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 11:07:38 INF] Update_ImeTemp API called. Template: Amit Bhadana##1037
+[2026-08-06 11:07:38 INF] JSON file validation passed. Uploaded File: Amit Bhadana##1039.json
+[2026-08-06 11:07:38 WRN] Template not found in database. FileName: Amit Bhadana##1037
+[2026-08-06 11:07:38 WRN] Update_ImeTemp failed. Template: Amit Bhadana##1037
+[2026-08-06 11:08:21 INF] Delete template request received. TemplateId: 26442
+[2026-08-06 11:08:21 INF] Deleting template. TemplateId: 26442, FileName: Test##1037
+[2026-08-06 11:08:21 INF] Database record deleted successfully. TemplateId: 26442
+[2026-08-06 11:08:21 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\Bitmap.jpg
+[2026-08-06 11:08:21 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Test.json
+[2026-08-06 11:08:21 INF] Delete template completed successfully. TemplateId: 26442
+[2026-08-06 11:08:36 INF] Delete template request received. TemplateId: 26435
+[2026-08-06 11:08:36 INF] Deleting template. TemplateId: 26435, FileName: new##1038
+[2026-08-06 11:08:36 INF] Database record deleted successfully. TemplateId: 26435
+[2026-08-06 11:08:36 WRN] Image file not found. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-06 11:08:36 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\new.json
+[2026-08-06 11:08:36 INF] Delete template completed successfully. TemplateId: 26435
+[2026-08-06 11:08:38 INF] Delete template request received. TemplateId: 26417
+[2026-08-06 11:08:38 INF] Deleting template. TemplateId: 26417, FileName: Amit Bhadana##1039
+[2026-08-06 11:08:38 INF] Database record deleted successfully. TemplateId: 26417
+[2026-08-06 11:08:38 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\00016 2022.02.17 12.33.111A (1) - Copy.jpg
+[2026-08-06 11:08:38 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Amit Bhadana.json
+[2026-08-06 11:08:38 INF] Delete template completed successfully. TemplateId: 26417
+[2026-08-06 11:08:41 INF] Delete template request received. TemplateId: 26420
+[2026-08-06 11:08:41 INF] Deleting template. TemplateId: 26420, FileName: Sundharam TEST##1037
+[2026-08-06 11:08:41 INF] Database record deleted successfully. TemplateId: 26420
+[2026-08-06 11:08:41 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\000002 2026.03.13 10.52.471F.jpg
+[2026-08-06 11:08:41 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Sundharam TEST##1037.json
+[2026-08-06 11:08:41 INF] Delete template completed successfully. TemplateId: 26420
+[2026-08-06 11:08:44 INF] Delete template request received. TemplateId: 26421
+[2026-08-06 11:08:44 INF] Deleting template. TemplateId: 26421, FileName: Cgpsc_Testing##1037
+[2026-08-06 11:08:44 INF] Database record deleted successfully. TemplateId: 26421
+[2026-08-06 11:08:44 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\159801.jpg
+[2026-08-06 11:08:44 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Cgpsc_Testing##1037.json
+[2026-08-06 11:08:44 INF] Delete template completed successfully. TemplateId: 26421
+[2026-08-06 11:08:47 INF] Delete template request received. TemplateId: 26427
+[2026-08-06 11:08:47 INF] Deleting template. TemplateId: 26427, FileName: Abhilash_1##1037
+[2026-08-06 11:08:47 INF] Database record deleted successfully. TemplateId: 26427
+[2026-08-06 11:08:48 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\10001_page-0001.jpg
+[2026-08-06 11:08:48 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Abhilash_1##1037.json
+[2026-08-06 11:08:48 INF] Delete template completed successfully. TemplateId: 26427
+[2026-08-06 11:08:51 INF] Delete template request received. TemplateId: 26430
+[2026-08-06 11:08:51 INF] Deleting template. TemplateId: 26430, FileName: OSM Testing Template
+[2026-08-06 11:08:51 INF] Database record deleted successfully. TemplateId: 26430
+[2026-08-06 11:08:51 WRN] Image file not found. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\60156_OMR.jpg
+[2026-08-06 11:08:51 WRN] JSON file not found. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\OSM Testing Template.json
+[2026-08-06 11:08:51 INF] Delete template completed successfully. TemplateId: 26430
+[2026-08-06 11:08:53 INF] Delete template request received. TemplateId: 26439
+[2026-08-06 11:08:53 INF] Deleting template. TemplateId: 26439, FileName: Yanshika Test Schema##1044
+[2026-08-06 11:08:53 INF] Database record deleted successfully. TemplateId: 26439
+[2026-08-06 11:08:53 INF] Image deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\00016 2022.02.17 12.33.111A (1) - Copy - Copy - Copy - Copy - Copy - Copy(2)(1).jpg
+[2026-08-06 11:08:53 INF] JSON file deleted successfully. Path: D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\Yanshika Test Schema##1044.json
+[2026-08-06 11:08:53 INF] Delete template completed successfully. TemplateId: 26439
+[2026-08-06 11:09:30 INF] Create_ImeTemp API called. TempName: IOCL, EmpId: 1037
+[2026-08-06 11:09:30 INF] Image validation completed for IOCL.jpg
+[2026-08-06 11:09:30 INF] Image saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\ImageManager\IOCL.jpg
+[2026-08-06 11:09:30 INF] Database record created successfully. TempName: IOCL, Employee: 1037
+[2026-08-06 11:09:30 INF] Create_ImeTemp API completed successfully.
+[2026-08-06 11:10:54 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-06 11:10:54 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-06 11:10:54 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-06 11:10:54 WRN] Old JSON file not found: 
+[2026-08-06 11:10:54 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-06 11:10:54 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-06 11:47:49 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-06 11:47:49 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-06 11:47:49 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-06 11:47:49 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-06 11:47:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-06 11:47:49 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-06 14:17:51 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:18:09 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:18:12 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:20:57 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:21:00 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:22:58 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:23:00 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:24:46 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:24:53 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:24:55 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:25:30 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:25:30 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:25:36 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:25:36 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:29:44 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:29:44 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:29:53 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:29:53 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:36:53 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:36:54 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:37:14 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:37:14 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:03 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:04 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:24 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:28 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:29 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:36 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:40 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:46 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:49 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:50 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:38:51 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 14:39:00 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:18:14 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:18:15 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:18:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:18:19 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:19:20 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:19:56 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:20:23 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:20:35 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:20:35 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:20:42 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:20:42 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:21:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:21:17 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 15:25:48 INF] Update_ImeTemp API called. Template: IOCL##1037
+[2026-08-06 15:25:48 INF] JSON file validation passed. Uploaded File: IOCL##1037.json
+[2026-08-06 15:25:49 INF] Database updated successfully for Template: IOCL##1037
+[2026-08-06 15:25:49 INF] Old JSON deleted: TempManager/IOCL##1037.json
+[2026-08-06 15:25:49 INF] New JSON saved successfully at D:\Prashant_Devloper\ImageBaseOMR\ScannerProj_OMR\VedMata_API (13_July)\Version1\wwwroot\TempManager\IOCL##1037.json
+[2026-08-06 15:25:49 INF] Update_ImeTemp completed successfully. Template: IOCL##1037
+[2026-08-06 16:08:46 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 16:08:49 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 16:10:03 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
+[2026-08-06 17:09:51 WRN] Overriding address(es) 'http://0.0.0.0:7400'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-08-06 17:09:53 WRN] Failed to determine the https port for redirect.
+[2026-08-06 17:38:08 INF] Get Succsfully =System.Collections.Generic.List`1[SQCScanner.Modal.EmpModel]
