@@ -21,7 +21,7 @@ builder.Host.UseSerilog();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("dbc")));
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(7400);
+    options.ListenAnyIP(6100);
 });
 builder.Services.AddScoped<OmrProcessingService>();
 builder.Services.AddScoped<JwtAuth>();
@@ -32,6 +32,7 @@ builder.Services.AddScoped<table_gen>();
 builder.Services.AddScoped<ImgSave>();
 builder.Services.AddScoped<FindCordinationClass>();
 builder.Services.AddScoped<BarCodeScaning>();
+builder.Services.AddScoped<CharReadingClass>();
 builder.Services.AddScoped<RealtimeCSV_Rec>();
 builder.Services.AddSingleton<OmrProcessingControlService>();
 builder.Services.AddSingleton<WebSocketConnectionManager>();

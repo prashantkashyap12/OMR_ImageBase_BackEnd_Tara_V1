@@ -4,6 +4,7 @@ using Dapper;
 using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using OpenCvSharp.Aruco;
 using Syncfusion.EJ2.Linq;
 using TesseractOCR.Renderers;
 using Version1.Modal;
@@ -29,21 +30,21 @@ namespace SQCScanner.Services
         }
 
         // Save Record into DB 
-        public async Task<Dictionary<string, string>> RecordSaveVal(OmrResult respose, int templateId, string userName, bool IsSaveDb, string folderPath, string imagePath, string templateName)
+        public async Task<Dictionary<string, string>> RecordSaveVal(OmrResult respose, int templateId, string userName, string userId, bool IsSaveDb, string folderPath, string imagePath, string templateName)
         {
             Dictionary<string, string> records = new Dictionary<string, string>();
             userName = userName ?? "";
             var Query = "";
             dynamic res;
             dynamic result;
-            string csvName= folderPath;
 
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
                 {
                     connection.Open();
-                    string tableName = $"Template_{templateId}";
+                    var getFolderName = new DirectoryInfo(folderPath).Name;
+                    string tableName = $"Tem_{userId}_{getFolderName}";
                     string checkTableSql = @"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE @TableName";
                     var exists = await connection.QueryFirstOrDefaultAsync(checkTableSql, new { TableName = tableName+"%" });
                     bool tableExists = exists != null;
@@ -54,20 +55,22 @@ namespace SQCScanner.Services
                     records.Add("Status", respose.Success.ToString());
                     var fields2 = respose.FieldResults.ToDictionary(fr => fr.Key, dl => dl.Value);
                     var fileName = "";
+                    var DirectionAction = Path.Combine("wFileManager/ScanResult/Inspection/", userId.ToString(), new DirectoryInfo(folderPath).Name);
                     var sharePath = "";
+
                     var imgName = "";
                     var pathIns = "";
 
                     if (respose.Success)
                     {
-                        sharePath = "wwwroot/ScannedImg";
+                        sharePath = Path.Combine(DirectionAction, "successful");
                         records.Add("Report", "Image is Scanned Successfully");             // true k case me auto add ni aata.
                         foreach (var kvp in fields2)
                         {
                             if (kvp.Key == "FileName")
                             {
                                 imgName = kvp.Value;
-                                pathIns = Path.Combine(sharePath, tableName, kvp.Value);
+                                pathIns = Path.Combine(sharePath, kvp.Value);
                                 pathIns = pathIns.Replace("\\", "/");
                                 records.Add(kvp.Key, pathIns);
                                 fileName = pathIns;
@@ -80,14 +83,15 @@ namespace SQCScanner.Services
                     }
                     else
                     {
-                        sharePath = "wwwroot/RejectImg";
+                        sharePath = Path.Combine(DirectionAction, "failure");
+
                         bool injectImg = true;
                         foreach (var filds in fields2)
                         {
                             if(filds.Key== "FileName")
                             {
                                 imgName = filds.Value;
-                                pathIns = Path.Combine(sharePath, tableName, filds.Value);
+                                pathIns = Path.Combine(sharePath, filds.Value);
                                 pathIns = pathIns.Replace("\\", "/");
                                 records.Add(filds.Key, pathIns);
                                 fileName = pathIns;
@@ -98,14 +102,13 @@ namespace SQCScanner.Services
                                 records.Add(filds.Key, filds.Value);
                             }
 
-                            if (injectImg)
-                            {
-                                string imgName1 = Path.GetFileName(imagePath);
-                                imgName1 = Path.Combine("wFileManager", folderPath, imgName1);
-                                records.TryAdd("FileName", imgName1);
-                            }
+                            //if (injectImg)
+                            //{
+                            //    string imgName1 = Path.GetFileName(imagePath);
+                            //    imgName1 = Path.Combine("wFileManager", folderPath, imgName1);
+                            //    records.TryAdd("FileName", imgName1);
+                            //}
                         }
-                        _realTimeCSV.RealtimeCSV(userName, templateId, records, templateName, csvName);
 
                         // save error msg only on remaing column.
                         Query = @$"select column_name from INFORMATION_SCHEMA.columns where table_name = @TableName";
@@ -123,14 +126,20 @@ namespace SQCScanner.Services
                         }
                     }
 
+                    if (!Directory.Exists(DirectionAction))
+                    {
+                        Directory.CreateDirectory(DirectionAction);
+                    }
+
+                    _realTimeCSV.RealtimeCSV(DirectionAction, records);
                 
                     if (tableExists)
                     {
                         // Does Record is Exist or Not.
                         // here we are just check is successFull Check img done.
                         var RecordExis = "";
-                        var checkSuss = "wwwroot/ScannedImg/" + tableName + '/' + imgName;
-                        var checkfail = "wwwroot/RejectImg/" + tableName + '/' + imgName;
+                        string checkSuss = Path.Combine(sharePath, imgName).Replace("\\", "/"); ;
+                        string checkfail = Path.Combine(sharePath, imgName).Replace("\\", "/"); ;
                         tableName = exists.TABLE_NAME;
                         RecordExis = $@"select * from [{tableName}] where FileName = '{checkSuss}';
                                         select * from [{tableName}] where FileName = '{checkfail}'";
@@ -174,7 +183,7 @@ namespace SQCScanner.Services
                                 //records.Add("ServePath", folderPath);
                                 records["FileName"] = folderPath;
                                 string resulta = string.Join(",",records.Select(x => $"{x.Key}={x.Value}"));
-                                _realTimeCSV.RealtimeCSV(userName, templateId, records, templateName, csvName);
+                                _realTimeCSV.RealtimeCSV(userName, records);
                             res = new
                             {
                                 res = records,

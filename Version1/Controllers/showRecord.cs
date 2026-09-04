@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenCvSharp;
@@ -16,6 +17,7 @@ using OpenCvSharp.Aruco;
 using Syncfusion.EJ2.Notifications;
 using TesseractOCR.Renderers;
 using Version1.Data;
+using ZXing.Aztec.Internal;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace SQCScanner.Controllers
@@ -677,6 +679,13 @@ namespace SQCScanner.Controllers
             var result = "";
             try
             {
+                var token = Request.Headers["Authorization"].FirstOrDefault()?.Replace("Bearer ", "").Trim();
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var jwtToken = tokenHandler.ReadJwtToken(token);
+                var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid")?.Value;
+
+
+
                 using (var _conn = new SqlConnection(_connectionString))
                 {
                     _conn.Open();
@@ -684,7 +693,7 @@ namespace SQCScanner.Controllers
                     dynamic queryResult;
                     if (fileName==null)
                     {
-                        querry = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES where TABLE_NAME LIKE 'Template%';";
+                        querry = $"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES where TABLE_NAME LIKE 'Tem_{userId}%';";
                         queryResult = _conn.Query(querry);
 
                     }

@@ -11,6 +11,10 @@ using OpenCvSharp;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using System.Text;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Data.SqlClient;
+using Dapper;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace Version1.Controllers
 {
@@ -29,6 +33,8 @@ namespace Version1.Controllers
         private readonly table_gen _recordTable;
         private readonly ImgSave _imgSave;
         private readonly FindCordinationClass _FindCordinationClass;
+        private readonly IConfiguration _configuration;
+        private readonly string _connectionString;
 
         public OmrProcessingController(
             OmrProcessingService omrService,
@@ -39,7 +45,8 @@ namespace Version1.Controllers
             RecordSave recordSave,
             table_gen recordTable,
             ImgSave imgSave,
-            FindCordinationClass FindCordinationClass)
+            FindCordinationClass FindCordinationClass,
+            IConfiguration configuration)
             {
             _omrService = omrService;
             _env = env;
@@ -49,6 +56,7 @@ namespace Version1.Controllers
             _controlService = controlService;
             _SaveOnly = recordSave;
             _imgSave = imgSave;
+            _configuration = configuration;
             _FindCordinationClass = FindCordinationClass;
                 if (controlService == null)
                 {
@@ -136,24 +144,25 @@ namespace Version1.Controllers
 
                                 // Scaning to get data from OMR Sheet
                                 var res = await _omrService.ProcessOmrSheet(imagePath, templatePath, imageUrl, ser, userName);
+                                OmrProcessingService.MaybeCleanupBatch(25);   //  Forcefully Clean batch files
                                 results.Add(res);
                                 if (true)
                                 {
                                     if (crttb == 1)
                                     {
-                                        var tableCrt = await _recordTable.TableCreation(res, idTemp);
+                                        var tableCrt = await _recordTable.TableCreation(res, userId, folderPAth);
                                     }
                                     crttb++;
                                 }
                                 dynamic dbRes = null;
 
                                 // 1. Save_Record into DB         - Done 
-                                dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, IsSaveDb, folderPAth, imagePath, templateName);
+                                dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, imagePath, templateName);
                                 if (IsSaveDb)
                                 {
                                 // 2. Save_Sacanned Img Folder    - Done
                                     var stat = res.Success;
-                                    var SaveRoot = await _imgSave.ScanedSave(_env.WebRootPath, imagePath, idTemp, stat);
+                                    var SaveRoot = await _imgSave.ScanedSave(Directory.GetCurrentDirectory(), imagePath, idTemp, stat, folderPath, userId);
                                 }
                                 // 3. WS_Handler                  - Done
                                 string jsonResult = JsonSerializer.Serialize(dbRes);
@@ -218,7 +227,6 @@ namespace Version1.Controllers
             return Ok("Processing resumed.");
         }
 
-
         [HttpPost("stop-processing")]
         public IActionResult StopProcessing()
         {
@@ -275,6 +283,56 @@ namespace Version1.Controllers
 
                 return Ok(headers);
             }
+        }
+
+        [HttpGet("DataResponce")]
+        public async Task<IActionResult> DataResponce( int PageNo, int PageSize, string folderName)
+        {
+            dynamic res;
+            dynamic dataResp = "";
+            int value = 0;
+            try
+            {
+                var token = Request.Headers["Authorization"].FirstOrDefault()?.Replace("Bearer ", "").Trim();
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var jwtToken = tokenHandler.ReadJwtToken(token);
+                var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid")?.Value;
+
+                using (var _conn = new SqlConnection(_configuration.GetConnectionString("dbc")))
+                {
+                    _conn.Open();
+                    string checkTableSql = $@"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE 'Tem_{userId}_{folderName}%'";
+                    var exists = _conn.QueryFirstOrDefault(checkTableSql);
+                    if (exists != null)
+                    {
+                        string querry = $"SELECT * FROM [{exists.TABLE_NAME}] ORDER BY Id  OFFSET ({PageNo} - 1) * {PageSize} ROWS FETCH NEXT {PageSize} ROWS ONLY"; 
+                        dataResp = _conn.Query(querry);
+
+
+                        value = _conn.QuerySingle<int>($"SELECT count(*) FROM [{exists.TABLE_NAME}]");
+
+                    }
+                    else
+                    {
+                        dataResp = "Not Found Record";
+                    }
+                }
+                res = new
+                {
+                    status = true,
+                    Record = dataResp,
+                    Total = value
+                };
+            }
+            catch (Exception ex)
+            {
+                res = new
+                {
+                    status = false,
+                    Messages = ex.Message
+                };
+            }
+            return Ok(res);
         }
 
     }

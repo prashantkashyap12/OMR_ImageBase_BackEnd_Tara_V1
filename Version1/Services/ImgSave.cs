@@ -15,30 +15,32 @@ namespace SQCScanner.Services
         }
 
 
-        public async Task<IActionResult> ScanedSave(string root, string imgPath, int templateId, bool status)
+        public async Task<IActionResult> ScanedSave(string root, string imgPath, int templateId, bool status, string folderPath, string userId)
         {
             dynamic res = "";
             try
             {
-
+                root = Path.Combine(root, "wFileManager/ScanResult", "Inspection");
                 var getFile = Path.GetFileName(imgPath);
                 var folderPathMain = "";
+                var folderLocation = "";
+
                 if (status)
                 {
-                   folderPathMain = Path.Combine(root, "ScannedImg/", $"Template_{templateId}");
+                    folderPathMain = Path.Combine(root, userId.ToString(), new DirectoryInfo(folderPath).Name, "successful");
                 }
                 else
                 {
-                    folderPathMain = Path.Combine(root, "RejectImg/", $"Template_{templateId}");
+                    folderPathMain = Path.Combine(root, userId.ToString(), new DirectoryInfo(folderPath).Name, "failure");
                 }
 
+                // Check file Already Saved.
                 if (!Directory.Exists(folderPathMain))
                 {
                     Directory.CreateDirectory(folderPathMain);
                 }
+
                 folderPathMain = Path.Combine(folderPathMain, getFile);
-                
-                // Check file Already Saved.
                 if (!File.Exists(folderPathMain))
                 {
                     // Save Img  
@@ -47,13 +49,11 @@ namespace SQCScanner.Services
                     {
                         await ImgTemp.CopyToAsync(TempSet);
                     }
-                    
                     res = new
                     {
                         message = "File Save Into TemplateWise n FolderName",
                         state = true,
                     };
-                 
                 }
                 else
                 {
@@ -63,10 +63,10 @@ namespace SQCScanner.Services
                         state = false,
                     };
                 }
-                if (File.Exists(imgPath))     // img will be delete as per user desier 
-                {
-                    File.Delete(imgPath);
-                }
+                //if (File.Exists(imgPath))     // img will be delete as per user desier 
+                //{
+                //    File.Delete(imgPath);
+                //}
 
             }
             catch (Exception ex)
@@ -77,8 +77,6 @@ namespace SQCScanner.Services
                     state = false,
                 };
             }
-
-            Console.WriteLine(res);
             return new JsonResult(res);
         }
 

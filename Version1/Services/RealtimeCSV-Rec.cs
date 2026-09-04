@@ -3,6 +3,7 @@ using Version1.Data;
 using Version1.Modal;
 using System.Text;
 using System;
+using OpenCvSharp.Aruco;
 
 namespace SQCScanner.Services
 {
@@ -15,22 +16,12 @@ namespace SQCScanner.Services
         }
 
         public async Task<string> RealtimeCSV(
-        string userId,
-        int idTemp,
-        Dictionary<string, string> record,
-        string templateName,
-        string folderPAth)
+        string dirPath,
+        Dictionary<string, string> record)
         {
-            //wFileManager/ScanResult
             try
             {
-                string dirPath = Path.Combine("wFileManager", "ScanResult", "CSV_Record", userId, templateName);
-                Directory.CreateDirectory(dirPath);
-                string safeFileName = folderPAth
-                    .Replace("\\", "_")
-                    .Replace("/", "_");
-
-                string filePath = Path.Combine(dirPath, $"{safeFileName}_file.csv");
+                string filePath = Path.Combine(dirPath, $"Record.csv");
                 bool fileExists = File.Exists(filePath);
                 List<string> headers = new();
                 if (fileExists)

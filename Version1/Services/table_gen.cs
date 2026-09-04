@@ -16,16 +16,18 @@ namespace SQCScanner.Services
             _configuration = configuration;
             _connectionString = _configuration.GetConnectionString("dbc")!;
         }
-        public async Task<List<string>> TableCreation(OmrResult respose, int templateId)
+        public async Task<List<string>> TableCreation(OmrResult respose, string templateId, string folderPAth)
         {
 
             var fieldNames = new List<string>();
 
             using (var connection = new SqlConnection(_connectionString))
             {
+
                 connection.Open();
                 string dateCurrent = DateTime.Now.ToString("dd-MM-yyyy/HH:mm:ss");
-                string tableName = $"Template_{templateId}";
+                string getFolderName = new DirectoryInfo(folderPAth).Name;
+                string tableName = $"Tem_{templateId}_{getFolderName}";
                 string checkTableSql = @"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE @TableName";
                 var exists = await connection.QueryFirstOrDefaultAsync(checkTableSql, new { TableName = tableName+"%" });
                 bool tableExists = exists != null;
