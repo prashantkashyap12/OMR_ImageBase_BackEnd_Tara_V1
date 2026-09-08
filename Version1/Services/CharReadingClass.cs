@@ -1,5 +1,8 @@
-﻿using SixLabors.ImageSharp.PixelFormats;
+﻿using System;
+using System.IO;
+using System.Linq;
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using Tesseract;
 
@@ -7,79 +10,72 @@ namespace SQCScanner.Services
 {
     public class CharReadingClass
     {
-        // Rotation angles to try — box orientation can vary, so we don't assume a fixed angle.
-        private static readonly float[] RotationAngles = { 0f, 90f, 180f, 270f };
-
-        // Resolve tessdata path ONCE relative to the app's actual bin folder,
-        // never relative to the process's current working directory.
+        private static readonly float[] RotationAngles = { 0f }; //, 90f, 180f, 270f
         private static readonly string TessDataPath = Path.Combine(AppContext.BaseDirectory, "tessdata");
+        private static readonly string ErrorImageFolder = @"D:\Prashant_Devloper\ImageBaseOMR\FrontEnd\OMR_ImageBase_BackEnd_V1\Version1\wFileManager\bulk_scan\Text ERROR";
 
         public static string ReadChar(Image<Rgba32> charBox)
         {
+            string debugId = $"{DateTime.Now:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}".Substring(0, 26);
+
             try
             {
-                charBox.SaveAsPng("wFileManager\\ScanResult\\TemplateImages\\check\\bulk_scan\\Crop");
+                //SaveDebugImage(charBox, $"{debugId}_0_original.png");
 
-                // Fail fast with a clear message instead of the opaque
-                // "Failed to initialise tesseract engine" error.
                 if (!Directory.Exists(TessDataPath))
-                {
-                    Console.WriteLine($"OCR Error: tessdata folder not found at '{TessDataPath}'. " +
-                        "Make sure the 'tessdata' folder is set to Copy to Output Directory (Copy if newer) in the project, " +
-                        "and that eng.traineddata exists inside it.");
                     return string.Empty;
-                }
-
-                string trainedDataFile = Path.Combine(TessDataPath, "eng.traineddata");
-                if (!File.Exists(trainedDataFile))
-                {
-                    Console.WriteLine($"OCR Error: 'eng.traineddata' not found at '{trainedDataFile}'. " +
-                        "Download it from https://github.com/tesseract-ocr/tessdata and place it in the tessdata folder.");
-                    return string.Empty;
-                }
 
                 string bestResult = string.Empty;
                 float bestConfidence = -1f;
-                bool needsUpscale = charBox.Height < 40 || charBox.Width < 40;
 
+                // 1. Line/Text sequence ke liye Engine Mode & PSM setup
                 using var engine = new TesseractEngine(TessDataPath, "eng", EngineMode.Default);
                 engine.SetVariable("tessedit_char_whitelist", "0123456789");
 
+                // Single Line mode (PSM 7) multiple digits ke liye perfect hai
+                engine.SetVariable("tessedit_pageseg_mode", "7");
+
+                const int scale = 3;
+
                 foreach (var angle in RotationAngles)
                 {
-                    using var candidate = charBox.Clone(ctx =>
-                    {
-                        if (needsUpscale)
+                    // Variant 1: Adaptive Contrast Enhancement (Faded digits ke liye)
+                    // Variant 2: Light Adaptive Thresholding
+                    //for (int variant = 1; variant <= 2; variant++)
+                    //{
+                        using var candidate = charBox.Clone(ctx =>
                         {
-                            const int scale = 3;
-                            ctx.Resize(charBox.Width * scale, charBox.Height * scale, KnownResamplers.Lanczos3);
-                        }
+                            // Resize (Bicubic scaling keeps thin strokes intact)
+                            ctx.Resize(charBox.Width * scale, charBox.Height * scale, KnownResamplers.Bicubic);
+                            //if (angle != 0f)
+                            //    ctx.Rotate(angle);
+                            ctx.Grayscale();
+                            ctx.HistogramEqualization();
+                            ctx.Contrast(1.5f);
+                            
+                        });
 
-                        if (angle != 0f)
+                        using var stream = new MemoryStream();
+                        candidate.SaveAsPng(stream);
+                        var bytes = stream.ToArray();
+
+                        SaveDebugBytes(bytes, $"{debugId}_v_rot{(int)angle}.png");
+
+                        using var pix = Pix.LoadFromMemory(bytes);
+
+                        // PageSegMode.SingleLine enforce karein multiple digits read karne ke liye
+                        using var page = engine.Process(pix, PageSegMode.SingleLine);
+
+                        string rawText = page.GetText();
+                        string digitsOnly = new string(rawText.Where(char.IsDigit).ToArray());
+                        float confidence = page.GetMeanConfidence();
+
+                        if (!string.IsNullOrEmpty(digitsOnly) && confidence > bestConfidence)
                         {
-                            ctx.Rotate(angle);
+                            bestConfidence = confidence;
+                            bestResult = digitsOnly;
                         }
-
-                        ctx.Grayscale();
-                        ctx.Contrast(1.2f);
-                    });
-
-                    using var stream = new MemoryStream();
-                    candidate.SaveAsPng(stream);
-                    stream.Position = 0;
-
-                    using var pix = Pix.LoadFromMemory(stream.ToArray());
-                    using var page = engine.Process(pix, PageSegMode.SingleLine);
-
-                    string rawText = page.GetText();
-                    string digitsOnly = new string(rawText.Where(char.IsDigit).ToArray());
-                    float confidence = page.GetMeanConfidence();
-
-                    if (!string.IsNullOrEmpty(digitsOnly) && confidence > bestConfidence)
-                    {
-                        bestConfidence = confidence;
-                        bestResult = digitsOnly;
-                    }
+                    //}
                 }
 
                 return bestResult;
@@ -89,6 +85,30 @@ namespace SQCScanner.Services
                 Console.WriteLine($"OCR Error: {ex.Message}");
                 return string.Empty;
             }
+        }
+
+        private static void SaveDebugImage(Image<Rgba32> image, string fileName)
+        {
+            try
+            {
+                if (!Directory.Exists(ErrorImageFolder))
+                    Directory.CreateDirectory(ErrorImageFolder);
+
+                image.SaveAsPng(Path.Combine(ErrorImageFolder, fileName));
+            }
+            catch { }
+        }
+
+        private static void SaveDebugBytes(byte[] pngBytes, string fileName)
+        {
+            try
+            {
+                if (!Directory.Exists(ErrorImageFolder))
+                    Directory.CreateDirectory(ErrorImageFolder);
+
+                File.WriteAllBytes(Path.Combine(ErrorImageFolder, fileName), pngBytes);
+            }
+            catch { }
         }
     }
 }

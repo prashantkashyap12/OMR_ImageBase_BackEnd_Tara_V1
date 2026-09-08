@@ -34,7 +34,6 @@ namespace SQCScanner.Controllers
             _dbContext = dbContext;
             _logger = logger;
         }
-
   
         [HttpPost]
         [Route("Create_ImeTemp")]
@@ -314,8 +313,6 @@ namespace SQCScanner.Controllers
             }
         }
 
-       
-
         [HttpDelete]
         [Route("Del_ImeTemp")]
         public async Task<IActionResult> deleteTemp(int id)
@@ -418,7 +415,6 @@ namespace SQCScanner.Controllers
                 return NotFound(res);
             }
         }
-
       
         [HttpPut]
         [Route("Update_ImeTemp")]

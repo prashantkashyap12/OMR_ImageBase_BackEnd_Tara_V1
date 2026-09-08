@@ -538,7 +538,8 @@ namespace Version1.Services
                         using var region = image.Clone(ctx => ctx.Crop(rect));
                         dynamic imageval = image;
                         string OCRValue = CharReadingClass.ReadChar(region);
-
+                        //string OCRValue = DigitTemplateReader.ReadNumber(region);
+                        Console.WriteLine(imagePath);
                         // move bar code error files
                         if (OCRValue == "Character not detected.")
                         {
@@ -546,12 +547,11 @@ namespace Version1.Services
                             {
                                 Directory.CreateDirectory($"{alignedImages}/Error/");
                             }
-                            string BarErrorName = $"{alignedImages}/Error/{result.FileName}";
-                            image.Save(BarErrorName);
                             result.Success = false;
                             result.FieldResults["Report"] = "Character not Found";
                         }
 
+                        
                         // move bar code error files
                         result.FieldResults["CharReading"] = OCRValue;
 
@@ -560,7 +560,7 @@ namespace Version1.Services
                 }
             }
             string markedPat2 = Path.Combine(alignedImages, result.FileName);
-            aligned.SaveImage(markedPat2);
+            //aligned.SaveImage(markedPat2);
             result.ProcessedAt = DateTime.UtcNow;
             SafeDispose(aligned);
             return result;
@@ -1146,10 +1146,9 @@ namespace Version1.Services
             // Convert into Gray Scale 
             using var gray = new Mat();
             Cv2.CvtColor(mat, gray, ColorConversionCodes.BGR2GRAY);
-
             //Cv2.ImWrite(outputPath11, gray);
-            using var binary = new Mat();
 
+            using var binary = new Mat();
             Cv2.GaussianBlur(gray, gray, new OpenCvSharp.Size(3, 3), 0);
             Cv2.Threshold(gray, binary, 80, 255, ThresholdTypes.Binary);        // Dynamic for add range for mark less then not count = Link Sensitivity   
             //Cv2.ImWrite(outputPath11, gray);

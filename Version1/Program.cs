@@ -33,6 +33,7 @@ builder.Services.AddScoped<ImgSave>();
 builder.Services.AddScoped<FindCordinationClass>();
 builder.Services.AddScoped<BarCodeScaning>();
 builder.Services.AddScoped<CharReadingClass>();
+builder.Services.AddScoped<DigitTemplateReader>();
 builder.Services.AddScoped<RealtimeCSV_Rec>();
 builder.Services.AddSingleton<OmrProcessingControlService>();
 builder.Services.AddSingleton<WebSocketConnectionManager>();

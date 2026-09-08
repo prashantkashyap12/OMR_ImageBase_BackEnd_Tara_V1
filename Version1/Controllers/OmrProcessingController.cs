@@ -143,7 +143,15 @@ namespace Version1.Controllers
                                 }
 
                                 // Scaning to get data from OMR Sheet
-                                var res = await _omrService.ProcessOmrSheet(imagePath, templatePath, imageUrl, ser, userName);
+
+                                string ResizedImagePath = SizedMatchedClass.ResizeImageToTemplateSize(
+                                    imagePath,
+                                    imageUrl
+                                );
+                                Console.WriteLine(ResizedImagePath);
+
+
+                                var res = await _omrService.ProcessOmrSheet(ResizedImagePath, templatePath, imageUrl, ser, userName);
                                 OmrProcessingService.MaybeCleanupBatch(25);   //  Forcefully Clean batch files
                                 results.Add(res);
                                 if (true)
@@ -201,6 +209,7 @@ namespace Version1.Controllers
                     };
                 }
             }
+
             bool currentState = resp.state;
             if (currentState)
             {
@@ -334,6 +343,8 @@ namespace Version1.Controllers
             }
             return Ok(res);
         }
+
+
 
     }
 }
