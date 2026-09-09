@@ -207,7 +207,7 @@ namespace SQCScanner.Controllers
                         isEmt = true;
                     }
                     if (string.IsNullOrEmpty(cont))
-                    {
+                    {   
                         sb.Append("Contact, ");
                         isEmt = true;
                     }
@@ -561,33 +561,39 @@ namespace SQCScanner.Controllers
         // Update API  -- Update User
         [HttpPut]
         [Route("Update")]
-        public IActionResult update(string EmpId, string name, string email, string pwd, string cont, string role)
+        public IActionResult update(EmpModel model)   
         {
-            //var hashingPwd = _empService.ComputeSha256Hash(pwd);
+   
             dynamic res;
             try
             {
-                var idmain = _DbContext.empModels.Find(EmpId);
+                //var idmain = _DbContext.empModels.Find(model.EmpId);
+                var idmain = _DbContext.empModels.FirstOrDefault(e => e.EmpId == model.EmpId);
                 if (idmain == null)
                 {
                     res = new
                     {
-                        state = false,
+                        state = false,  
                         message = "Record not Find"
                     };
                 }
                 else
                 {
-                    idmain.EmpName = name;
-                    idmain.EmpEmail = email;
-                    idmain.password = pwd;
-                    idmain.contact = cont;
-                    idmain.role = role;
+                    idmain.EmpName = model.EmpName ?? idmain.EmpName;
+                    idmain.EmpEmail = model.EmpEmail ?? idmain.EmpEmail;
+
+                    if (!string.IsNullOrEmpty(model.password))
+                    {
+                        idmain.password = model.password;
+                    }
+                    
+                    idmain.contact = model.contact ?? idmain.contact;
+                    idmain.role = model.role;
                     _DbContext.SaveChanges();
                     res = new
                     {
                         state = true,
-                        message = @$"Record saved {email}"
+                        message = @$"Record saved {model.EmpEmail}"
                     };
                 }
                 

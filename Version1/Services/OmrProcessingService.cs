@@ -539,7 +539,8 @@ namespace Version1.Services
                         dynamic imageval = image;
                         string OCRValue = CharReadingClass.ReadChar(region);
                         //string OCRValue = DigitTemplateReader.ReadNumber(region);
-                        Console.WriteLine(imagePath);
+                        OCRValue = $"ganeshh{OCRValue}";
+                        Console.WriteLine(OCRValue);
                         // move bar code error files
                         if (OCRValue == "Character not detected.")
                         {
