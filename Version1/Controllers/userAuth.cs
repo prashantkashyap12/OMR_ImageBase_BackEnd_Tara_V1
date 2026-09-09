@@ -579,15 +579,15 @@ namespace SQCScanner.Controllers
                 }
                 else
                 {
-                    idmain.EmpName = model.EmpName ?? idmain.EmpName;
-                    idmain.EmpEmail = model.EmpEmail ?? idmain.EmpEmail;
+                    idmain.EmpName = model.EmpName;
+                    idmain.EmpEmail = model.EmpEmail;
 
                     if (!string.IsNullOrEmpty(model.password))
                     {
                         idmain.password = model.password;
                     }
                     
-                    idmain.contact = model.contact ?? idmain.contact;
+                    idmain.contact = model.contact;
                     idmain.role = model.role;
                     _DbContext.SaveChanges();
                     res = new

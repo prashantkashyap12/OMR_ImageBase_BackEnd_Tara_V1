@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 using Dapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
@@ -15,6 +16,7 @@ using Newtonsoft.Json.Linq;
 using OpenCvSharp;
 using OpenCvSharp.Aruco;
 using Syncfusion.EJ2.Notifications;
+using TesseractOCR.Loggers;
 using TesseractOCR.Renderers;
 using Version1.Data;
 using ZXing.Aztec.Internal;
@@ -170,7 +172,6 @@ namespace SQCScanner.Controllers
                     {
                         query = $"SELECT COUNT(*) FROM [{data}]";
                         var count = await _conn.ExecuteScalarAsync<int>(query);
-                        Console.WriteLine(count);
                         total = total + count;
                     }
                     res = new
@@ -430,7 +431,6 @@ namespace SQCScanner.Controllers
             var result = "";
             try
             {
-                Console.WriteLine();
                 using (var _conn = new SqlConnection(_connectionString))
                 {
                     _conn.Open();
@@ -694,7 +694,33 @@ namespace SQCScanner.Controllers
                     if (fileName==null)
                     {
                         querry = $"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES where TABLE_NAME LIKE 'Tem_{userId}%';";
-                        queryResult = _conn.Query(querry);
+                        queryResult = _conn.Query(querry).ToList();
+                        var split = "";
+                        var results = new List<TableInfo>();
+                        foreach (var input1 in queryResult)
+                        {
+                            string input = input1.TABLE_NAME.ToString();
+                            string pattern = @"^(?<userId>Tem_\d+)_\$(?<templateId>\d+)\$_(?<folderName>.*?)_(?<dateTime>\d{2}-\d{2}-\d{4}-\d{2}:\d{2}:\d{2})$";
+                            Match match = Regex.Match(input, pattern);
+                            if (match.Success)
+                            {
+                                int Tempdata = int.Parse(match.Groups["templateId"].Value);
+                                int data = int.Parse(match.Groups["templateId"].Value);
+                                //var TempNameUnq = _context.ImgTemplate.Where(x => x.Id == Tempdata);
+                                //var EmpDetails = _context.empModels.Where(x => x.Id == data);
+                                results.Add(new TableInfo
+                                {
+                                    UserId = match.Groups["userId"].Value,
+                                    TemplateId = match.Groups["templateId"].Value,
+                                    FolderName = match.Groups["folderName"].Value,
+                                    DateTime = match.Groups["dateTime"].Value
+                                });
+                            }
+                        }
+
+                        queryResult = "";
+                        queryResult = results;
+
 
                     }
                     else
@@ -724,6 +750,13 @@ namespace SQCScanner.Controllers
 
             }
             return Ok(res);
+        }
+        public class TableInfo
+        {
+            public string UserId { get; set; }
+            public string TemplateId { get; set; }
+            public string FolderName { get; set; }
+            public string DateTime { get; set; }
         }
 
         [HttpDelete("Delete_Rec")]

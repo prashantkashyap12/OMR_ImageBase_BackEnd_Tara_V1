@@ -54,18 +54,6 @@ namespace SQCScanner.Services
 
                         await connection.ExecuteAsync(alterSql);
                     }
-
-
-
-
-                    //foreach (var field in fields)
-                    //{
-                    //    if (!existingColumns.Contains(field.ToLower()))
-                    //    {
-                    //        string alterSql = $"ALTER TABLE [{tableName}] ADD [{field}] NVARCHAR(MAX)";
-                    //        await connection.ExecuteAsync(alterSql);
-                    //    }
-                    //}
                 }
                 await connection.CloseAsync();
             }

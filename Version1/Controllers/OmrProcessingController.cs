@@ -158,14 +158,14 @@ namespace Version1.Controllers
                                 {
                                     if (crttb == 1)
                                     {
-                                        var tableCrt = await _recordTable.TableCreation(res, userId, folderPAth);
+                                        var tableCrt = await _recordTable.TableCreation(res, userId, folderPAth, userId, idTemp);
                                     }
                                     crttb++;
                                 }
                                 dynamic dbRes = null;
 
                                 // 1. Save_Record into DB         - Done 
-                                dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, imagePath, templateName);
+                                dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, imagePath, templateName, idTemp);
                                 if (IsSaveDb)
                                 {
                                 // 2. Save_Sacanned Img Folder    - Done

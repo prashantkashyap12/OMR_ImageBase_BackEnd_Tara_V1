@@ -30,7 +30,7 @@ namespace SQCScanner.Services
         }
 
         // Save Record into DB 
-        public async Task<Dictionary<string, string>> RecordSaveVal(OmrResult respose, int templateId, string userName, string userId, bool IsSaveDb, string folderPath, string imagePath, string templateName)
+        public async Task<Dictionary<string, string>> RecordSaveVal(OmrResult respose, int templateId, string userName, string userId, bool IsSaveDb, string folderPath, string imagePath, string templateName, int Templid)
         {
             Dictionary<string, string> records = new Dictionary<string, string>();
             userName = userName ?? "";
@@ -44,7 +44,7 @@ namespace SQCScanner.Services
                 {
                     connection.Open();
                     var getFolderName = new DirectoryInfo(folderPath).Name;
-                    string tableName = $"Tem_{userId}_{getFolderName}";
+                    string tableName = $"Tem_{userId}_${Templid}$_{getFolderName}";
                     string checkTableSql = @"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE @TableName";
                     var exists = await connection.QueryFirstOrDefaultAsync(checkTableSql, new { TableName = tableName+"%" });
                     bool tableExists = exists != null;
