@@ -691,10 +691,15 @@ namespace SQCScanner.Controllers
                     _conn.Open();
                     var querry = "";
                     dynamic queryResult;
+                    dynamic respose;
                     if (fileName==null)
                     {
                         querry = $"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES where TABLE_NAME LIKE 'Tem_{userId}%';";
                         queryResult = _conn.Query(querry).ToList();
+                        respose = _conn.Query(querry);
+
+
+
                         var split = "";
                         var results = new List<TableInfo>();
                         foreach (var input1 in queryResult)
@@ -713,15 +718,13 @@ namespace SQCScanner.Controllers
                                     UserId = match.Groups["userId"].Value,
                                     TemplateId = match.Groups["templateId"].Value,
                                     FolderName = match.Groups["folderName"].Value,
-                                    DateTime = match.Groups["dateTime"].Value
+                                    DateTime = match.Groups["dateTime"].Value,
+                                    FileName = input
                                 });
                             }
                         }
-
                         queryResult = "";
                         queryResult = results;
-
-
                     }
                     else
                     {
@@ -757,6 +760,7 @@ namespace SQCScanner.Controllers
             public string TemplateId { get; set; }
             public string FolderName { get; set; }
             public string DateTime { get; set; }
+            public string FileName { get; set; }
         }
 
         [HttpDelete("Delete_Rec")]

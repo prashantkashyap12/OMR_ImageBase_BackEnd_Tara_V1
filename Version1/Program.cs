@@ -14,6 +14,8 @@ using System.Security.Claims;
 using SixLabors.ImageSharp;
 using SQCScanner.Modal;
 using Serilog;
+using Microsoft.OpenApi.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
@@ -46,7 +48,6 @@ var configuration = builder.Configuration;
 builder.Services.AddJwtAuthentication(configuration);
 builder.Services.AddControllers();            // Add Base controller.
 builder.Services.AddEndpointsApiExplorer();   // Make meta data for get/post for swagger
-builder.Services.AddSwaggerGen();             // Gen UI Swagger
 builder.Services.AddHttpClient();
 builder.Services.AddCors(options =>
 {
@@ -55,6 +56,39 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin()
               .AllowAnyHeader()
               .AllowAnyMethod();
+    });
+});
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "My API",
+        Version = "v1"
+    });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter your JWT token. Example: Bearer eyJhbGciOiJIUzI1NiIs..."
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
     });
 });
 

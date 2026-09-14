@@ -35,6 +35,7 @@ namespace Version1.Controllers
         private readonly FindCordinationClass _FindCordinationClass;
         private readonly IConfiguration _configuration;
         private readonly string _connectionString;
+        private readonly ILogger _logger;
 
         public OmrProcessingController(
             OmrProcessingService omrService,
@@ -46,7 +47,8 @@ namespace Version1.Controllers
             table_gen recordTable,
             ImgSave imgSave,
             FindCordinationClass FindCordinationClass,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            ILogger<OmrProcessingController> logger)
             {
             _omrService = omrService;
             _env = env;
@@ -57,6 +59,7 @@ namespace Version1.Controllers
             _SaveOnly = recordSave;
             _imgSave = imgSave;
             _configuration = configuration;
+            _logger = logger;
             _FindCordinationClass = FindCordinationClass;
                 if (controlService == null)
                 {
@@ -64,55 +67,232 @@ namespace Version1.Controllers
                 }
             }
 
-        //  Process OMR Sheet    
+        ////  Process OMR Sheet    
+        //[HttpPost("process-omr")]
+        //public async Task<IActionResult> ProcessOmrSheet(string folderPath, string token, int idTemp, bool IsSaveDb, bool failReScan = true)
+        //{
+        //    dynamic resp;
+        //    _controlService.ResetProcessing();
+
+
+        //    // Token handler UserId Extract
+        //    var tokenHandler = new JwtSecurityTokenHandler();
+        //    var jwtToken = tokenHandler.ReadJwtToken(token);
+        //    var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid")?.Value;
+        //    var userName = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "unique_name")?.Value;
+        //    var folderPAth = folderPath;
+
+
+        //    // Y/N = ReScan failure Img Folder.
+        //    var sharefolder = "";
+        //    if (failReScan)
+        //    {
+        //        sharefolder = Path.Combine("wFileManager/" + folderPath);
+        //    }
+        //    else
+        //    {
+        //        sharefolder = Path.Combine("RejectImg/" + folderPath);
+        //    }
+
+        //    // Exist path
+        //    folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wFileManager/" + folderPath);
+        //        if (!Directory.Exists(folderPath))
+        //    {
+        //        resp = new
+        //        {
+        //            state = false,
+        //            message = "Folder path is invalid"
+        //        };
+        //    }
+        //    else
+        //    {
+        //        var imageFiles = Directory.GetFiles(folderPath, "*.*").Where(f => f.EndsWith(".jpg") || f.EndsWith(".png") || f.EndsWith(".jpeg") || f.EndsWith(".tif")).ToList();
+        //        var Targetjson = string.Empty;
+        //        var ReturnDetails = _dbContext.ImgTemplate.FirstOrDefault(x => x.Id == idTemp);
+        //        string imageUrl = ReturnDetails.imgPath;
+        //        string templateName = ReturnDetails.FileName;
+        //        imageUrl = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imageUrl);
+        //        if (ReturnDetails != null)
+        //        {
+        //            if (!string.IsNullOrEmpty(ReturnDetails.JsonPath))
+        //            {
+        //                Targetjson = ReturnDetails.JsonPath.Replace("\\", "/");
+        //                string templatePath = Path.Combine(_env.WebRootPath, Targetjson);
+        //                var results = new List<OmrResult>();
+        //                var crttb = 1;
+        //                var totalCount = JsonSerializer.Serialize(imageFiles.Count);
+
+        //                if (imageFiles.Count == 0)
+        //                {
+        //                    resp = new
+        //                    {
+        //                        state = false,
+        //                        message = "Image is not found"
+        //                    };
+        //                }
+        //                else
+        //                {
+        //                    int ser = 0;
+        //                    foreach (var imagePath in imageFiles)
+        //                    {
+        //                        ser = ser + 1;
+        //                         // Stop and Continue API Globle 
+        //                        _controlService.WaitIfPaused();
+
+        //                        // Stop handle
+        //                        if (_controlService.IsStopRequested)
+        //                        {
+        //                            break;
+        //                        }
+
+        //                        // Scaning to get data from OMR Sheet
+
+        //                        string ResizedImagePath = SizedMatchedClass.ResizeImageToTemplateSize(
+        //                            imagePath,
+        //                            imageUrl
+        //                        );
+        //                        Console.WriteLine(ResizedImagePath);
+
+
+        //                        var res = await _omrService.ProcessOmrSheet(ResizedImagePath, templatePath, imageUrl, ser, userName);
+        //                        OmrProcessingService.MaybeCleanupBatch(25);   //  Forcefully Clean batch files
+        //                        results.Add(res);
+        //                        if (true)
+        //                        {
+        //                            if (crttb == 1)
+        //                            {
+        //                                var tableCrt = await _recordTable.TableCreation(res, userId, folderPAth, userId, idTemp);
+        //                            }
+        //                            crttb++;
+        //                        }
+        //                        dynamic dbRes = null;
+
+        //                        // 1. Save_Record into DB         - Done 
+        //                        dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, imagePath, templateName, idTemp);
+        //                        if (IsSaveDb)
+        //                        {
+        //                        // 2. Save_Sacanned Img Folder    - Done
+        //                            var stat = res.Success;
+        //                            var SaveRoot = await _imgSave.ScanedSave(Directory.GetCurrentDirectory(), imagePath, idTemp, stat, folderPath, userId);
+        //                        }
+        //                        // 3. WS_Handler                  - Done
+        //                        string jsonResult = JsonSerializer.Serialize(dbRes);
+        //                        userId = Convert.ToString(userId);
+        //                        await _webSocketHandler.UserMessageAsync(userId, jsonResult);
+        //                    }
+        //                    await _webSocketHandler.UserMessageAsync(userId, totalCount);
+        //                    await _webSocketHandler.UserMessageAsync(userId, "");
+
+        //                    // Download CSV 
+        //                    var jsonString = JsonSerializer.Serialize(results);
+        //                    var csvBytes = Encoding.UTF8.GetBytes(jsonString);
+        //                    resp = new
+        //                    {
+        //                        state = true,
+        //                        record = results,
+        //                        csv = csvBytes
+        //                    };
+        //                }
+        //            }
+        //            else
+        //            {
+        //                resp = new
+        //                {
+        //                    state = false,
+        //                    message = "Template not found"
+        //                };
+        //            }
+        //        }
+        //        else
+        //        {
+        //            resp = new
+        //            {
+        //                state = false,
+        //                message = "Id is invalid please add Template first"
+        //            };
+        //        }
+        //    }
+
+        //    bool currentState = resp.state;
+        //    if (currentState)
+        //    {
+        //        return Ok(resp);
+        //    }
+        //    else
+        //    {
+        //        return NotFound(resp);
+        //    }
+        //}
+
+        // Process OMR Sheet    
         [HttpPost("process-omr")]
         public async Task<IActionResult> ProcessOmrSheet(string folderPath, string token, int idTemp, bool IsSaveDb, bool failReScan = true)
         {
             dynamic resp;
             _controlService.ResetProcessing();
 
-
-            // Token handler UserId Extract
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var jwtToken = tokenHandler.ReadJwtToken(token);
-            var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid")?.Value;
-            var userName = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "unique_name")?.Value;
-            var folderPAth = folderPath;
-
-
-            // Y/N = ReScan failure Img Folder.
-            var sharefolder = "";
-            if (failReScan)
+            try
             {
-                sharefolder = Path.Combine("wFileManager/" + folderPath);
-            }
-            else
-            {
-                sharefolder = Path.Combine("RejectImg/" + folderPath);
-            }
+                _logger.LogInformation("OMR processing started for FolderPath: {FolderPath}, TemplateId: {IdTemp}", folderPath, idTemp);
 
-            // Exist path
-            folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wFileManager/" + folderPath);
+                // Token handler UserId Extract
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var jwtToken = tokenHandler.ReadJwtToken(token);
+                var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid")?.Value;
+                var userName = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "unique_name")?.Value;
+                var folderPAth = folderPath;
+
+                _logger.LogInformation("Processing initiated by UserId: {UserId}, UserName: {UserName}", userId, userName);
+
+                // Y/N = ReScan failure Img Folder.
+                var sharefolder = failReScan
+                    ? Path.Combine("wFileManager/" + folderPath)
+                    : Path.Combine("RejectImg/" + folderPath);
+
+                // Exist path
+                folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wFileManager/" + folderPath);
+
                 if (!Directory.Exists(folderPath))
-            {
-                resp = new
                 {
-                    state = false,
-                    message = "Folder path is invalid"
-                };
-            }
-            else
-            {
-                var imageFiles = Directory.GetFiles(folderPath, "*.*").Where(f => f.EndsWith(".jpg") || f.EndsWith(".png") || f.EndsWith(".jpeg") || f.EndsWith(".tif")).ToList();
-                var Targetjson = string.Empty;
-                var ReturnDetails = _dbContext.ImgTemplate.FirstOrDefault(x => x.Id == idTemp);
-                string imageUrl = ReturnDetails.imgPath;
-                string templateName = ReturnDetails.FileName;
-                imageUrl = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imageUrl);
-                if (ReturnDetails != null)
-                {
-                    if (!string.IsNullOrEmpty(ReturnDetails.JsonPath))
+                    _logger.LogWarning("Invalid folder path requested: {FolderPath}", folderPath);
+                    resp = new
                     {
+                        state = false,
+                        message = "Folder path is invalid"
+                    };
+                }
+                else
+                {
+                    var imageFiles = Directory.GetFiles(folderPath, "*.*")
+                        .Where(f => f.EndsWith(".jpg") || f.EndsWith(".png") || f.EndsWith(".jpeg") || f.EndsWith(".tif"))
+                        .ToList();
+
+                    var Targetjson = string.Empty;
+                    var ReturnDetails = _dbContext.ImgTemplate.FirstOrDefault(x => x.Id == idTemp);
+
+                    if (ReturnDetails == null)
+                    {
+                        _logger.LogWarning("Template not found in DB for TemplateId: {IdTemp}", idTemp);
+                        resp = new
+                        {
+                            state = false,
+                            message = "Id is invalid please add Template first"
+                        };
+                    }
+                    else if (string.IsNullOrEmpty(ReturnDetails.JsonPath))
+                    {
+                        _logger.LogWarning("JsonPath missing for TemplateId: {IdTemp}", idTemp);
+                        resp = new
+                        {
+                            state = false,
+                            message = "Template not found"
+                        };
+                    }
+                    else
+                    {
+                        string imageUrl = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", ReturnDetails.imgPath);
+                        string templateName = ReturnDetails.FileName;
+
                         Targetjson = ReturnDetails.JsonPath.Replace("\\", "/");
                         string templatePath = Path.Combine(_env.WebRootPath, Targetjson);
                         var results = new List<OmrResult>();
@@ -121,6 +301,7 @@ namespace Version1.Controllers
 
                         if (imageFiles.Count == 0)
                         {
+                            _logger.LogWarning("No valid image files found in folder: {FolderPath}", folderPath);
                             resp = new
                             {
                                 state = false,
@@ -129,60 +310,63 @@ namespace Version1.Controllers
                         }
                         else
                         {
+                            _logger.LogInformation("Total {Count} images found for processing", imageFiles.Count);
+
                             int ser = 0;
                             foreach (var imagePath in imageFiles)
                             {
-                                ser = ser + 1;
-                                 // Stop and Continue API Globle 
+                                ser++;
+                                _logger.LogInformation("Processing image {Index}/{Total}: {ImagePath}", ser, imageFiles.Count, imagePath);
+
+                                // Stop and Continue API Global 
                                 _controlService.WaitIfPaused();
 
                                 // Stop handle
                                 if (_controlService.IsStopRequested)
                                 {
+                                    _logger.LogWarning("OMR processing stopped by user request at image index {Index}", ser);
                                     break;
                                 }
 
-                                // Scaning to get data from OMR Sheet
-
-                                string ResizedImagePath = SizedMatchedClass.ResizeImageToTemplateSize(
-                                    imagePath,
-                                    imageUrl
-                                );
+                                // Scanning to get data from OMR Sheet
+                                string ResizedImagePath = SizedMatchedClass.ResizeImageToTemplateSize(imagePath, imageUrl);
                                 Console.WriteLine(ResizedImagePath);
 
-
                                 var res = await _omrService.ProcessOmrSheet(ResizedImagePath, templatePath, imageUrl, ser, userName);
-                                OmrProcessingService.MaybeCleanupBatch(25);   //  Forcefully Clean batch files
+                                OmrProcessingService.MaybeCleanupBatch(25);   // Forcefully Clean batch files
                                 results.Add(res);
-                                if (true)
-                                {
-                                    if (crttb == 1)
-                                    {
-                                        var tableCrt = await _recordTable.TableCreation(res, userId, folderPAth, userId, idTemp);
-                                    }
-                                    crttb++;
-                                }
-                                dynamic dbRes = null;
 
-                                // 1. Save_Record into DB         - Done 
-                                dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, imagePath, templateName, idTemp);
+                                if (crttb == 1)
+                                {
+                                    await _recordTable.TableCreation(res, userId, folderPAth, userId, idTemp);
+                                }
+                                crttb++;
+
+                                // 1. Save_Record into DB
+                                dynamic dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, imagePath, templateName, idTemp);
+
                                 if (IsSaveDb)
                                 {
-                                // 2. Save_Sacanned Img Folder    - Done
+                                    // 2. Save_Scanned Img Folder
                                     var stat = res.Success;
                                     var SaveRoot = await _imgSave.ScanedSave(Directory.GetCurrentDirectory(), imagePath, idTemp, stat, folderPath, userId);
                                 }
-                                // 3. WS_Handler                  - Done
+
+                                // 3. WS_Handler
                                 string jsonResult = JsonSerializer.Serialize(dbRes);
                                 userId = Convert.ToString(userId);
                                 await _webSocketHandler.UserMessageAsync(userId, jsonResult);
                             }
+
                             await _webSocketHandler.UserMessageAsync(userId, totalCount);
                             await _webSocketHandler.UserMessageAsync(userId, "");
 
                             // Download CSV 
                             var jsonString = JsonSerializer.Serialize(results);
                             var csvBytes = Encoding.UTF8.GetBytes(jsonString);
+
+                            _logger.LogInformation("OMR Batch Processing Completed Successfully for UserId: {UserId}", userId);
+
                             resp = new
                             {
                                 state = true,
@@ -191,35 +375,34 @@ namespace Version1.Controllers
                             };
                         }
                     }
-                    else
-                    {
-                        resp = new
-                        {
-                            state = false,
-                            message = "Template not found"
-                        };
-                    }
+                }
+
+                bool currentState = resp.state;
+                if (currentState)
+                {
+                    return Ok(resp);
                 }
                 else
                 {
-                    resp = new
-                    {
-                        state = false,
-                        message = "Id is invalid please add Template first"
-                    };
+                    return NotFound(resp);
                 }
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An unhandled exception occurred during OMR processing for FolderPath: {FolderPath}", folderPath);
 
-            bool currentState = resp.state;
-            if (currentState)
-            {
-                return Ok(resp);
-            }
-            else
-            {
-                return NotFound(resp);
+                return StatusCode(500, new
+                {
+                    state = false,
+                    message = "An internal server error occurred while processing the OMR sheets.",
+                    error = ex.Message
+                });
             }
         }
+
+
+
+
 
         // Data Push procesing
         [HttpPost("pause-processing")]
@@ -295,7 +478,7 @@ namespace Version1.Controllers
         }
 
         [HttpGet("DataResponce")]
-        public async Task<IActionResult> DataResponce( int PageNo, int PageSize, string folderName)
+        public async Task<IActionResult> DataResponce( int PageNo, int PageSize, string tempId, string folderName)
         {
             dynamic res;
             dynamic dataResp = "";
@@ -310,7 +493,7 @@ namespace Version1.Controllers
                 using (var _conn = new SqlConnection(_configuration.GetConnectionString("dbc")))
                 {
                     _conn.Open();
-                    string checkTableSql = $@"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE 'Tem_{userId}_{folderName}%'";
+                    string checkTableSql = $@"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE 'Tem_{userId}_${tempId}$_{folderName}_%'";
                     var exists = _conn.QueryFirstOrDefault(checkTableSql);
                     if (exists != null)
                     {

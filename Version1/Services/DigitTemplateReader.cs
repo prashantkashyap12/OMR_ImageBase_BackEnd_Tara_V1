@@ -3,8 +3,6 @@ using SixLabors.ImageSharp.PixelFormats;
 
 namespace SQCScanner.Services
 {
-    // Reads NUMBER-ONLY (0-9) crops using template matching (not Tesseract) because
-    // the form's custom digit font is misread by stock OCR models even on clean crops.
     public class DigitTemplateReader
     {
         private static readonly string TemplateFolder = Path.Combine(AppContext.BaseDirectory, "DigitTemplates");
@@ -13,7 +11,7 @@ namespace SQCScanner.Services
             "Unlabeled");
 
         private const int NormW = 32, NormH = 48, MinComponentPx = 8, MinGapPx = 4;
-        private const double MinConfidence = 0.72;
+        private static readonly double MinConfidence = 0.60;
 
         private static readonly object Lock = new();
         private static Dictionary<char, List<bool[,]>>? _templates;
@@ -25,6 +23,9 @@ namespace SQCScanner.Services
             {
                 using var gray = charBox.CloneAs<L8>();
                 var mask = RemoveSmallComponents(MorphClose(Binarize(gray)), MinComponentPx);
+
+                SaveMaskToDisk(mask, $"transformed_{DateTime.Now:yyyyMMdd_HHmmss_fff}.png");
+
                 var segments = SegmentColumns(mask, MinGapPx);
                 if (segments.Count == 0) { SaveForReview(charBox, "no_segments"); return string.Empty; }
 
@@ -53,7 +54,81 @@ namespace SQCScanner.Services
             }
         }
 
-        // Add a labeled reference sample (call from an admin/calibration tool).
+        private static bool[,] Binarize(Image<L8> gray)
+        {
+            int w = gray.Width, h = gray.Height;
+            var hist = new int[256];
+
+            gray.ProcessPixelRows(a => {
+                for (int y = 0; y < h; y++)
+                {
+                    var row = a.GetRowSpan(y);
+                    for (int x = 0; x < w; x++) hist[row[x].PackedValue]++;
+                }
+            });
+
+            int total = w * h;
+            long sumAll = 0;
+            for (int t = 0; t < 256; t++) sumAll += (long)t * hist[t];
+
+            long sumB = 0;
+            int wB = 0;
+            double maxVar = -1;
+            int thr = 128;
+
+            for (int t = 0; t < 256; t++)
+            {
+                wB += hist[t];
+                if (wB == 0) continue;
+                int wF = total - wB;
+                if (wF == 0) break;
+                sumB += (long)t * hist[t];
+                double mB = (double)sumB / wB, mF = (double)(sumAll - sumB) / wF;
+                double v = (double)wB * wF * (mB - mF) * (mB - mF);
+                if (v > maxVar) { maxVar = v; thr = t; }
+            }
+
+            bool bgLight = hist[..thr].Sum() < hist[thr..].Sum();
+            var mask = new bool[h, w];
+
+            gray.ProcessPixelRows(a => {
+                for (int y = 0; y < h; y++)
+                {
+                    var row = a.GetRowSpan(y);
+                    for (int x = 0; x < w; x++)
+                    {
+                        byte v = row[x].PackedValue;
+                        mask[y, x] = bgLight ? v < thr : v > thr;
+                    }
+                }
+            });
+
+            return mask;
+        }
+
+        private static void SaveMaskToDisk(bool[,] mask, string filename)
+        {
+            int h = mask.GetLength(0);
+            int w = mask.GetLength(1);
+            if (w == 0 || h == 0) return;
+
+            using var img = new Image<L8>(w, h);
+            img.ProcessPixelRows(accessor =>
+            {
+                for (int y = 0; y < h; y++)
+                {
+                    var row = accessor.GetRowSpan(y);
+                    for (int x = 0; x < w; x++)
+                    {
+                        row[x] = new L8((byte)(mask[y, x] ? 0 : 255));
+                    }
+                }
+            });
+
+            Directory.CreateDirectory(UnlabeledFolder);
+            img.SaveAsPng(Path.Combine(UnlabeledFolder, filename));
+        }
+
         public static void AddTemplate(char digit, Image<Rgba32> sampleGlyphCrop)
         {
             if (!char.IsDigit(digit)) throw new ArgumentException("Only digits 0-9 are supported.", nameof(digit));
@@ -61,8 +136,6 @@ namespace SQCScanner.Services
             sampleGlyphCrop.SaveAsPng(Path.Combine(TemplateFolder, $"{digit}_{Guid.NewGuid():N}.png"));
             lock (Lock) { _templates = null; }
         }
-
-        // ---------- templates ----------
 
         private static void EnsureTemplatesLoaded()
         {
@@ -92,36 +165,6 @@ namespace SQCScanner.Services
             }
         }
 
-        // ---------- image processing ----------
-
-        // Otsu adaptive threshold (per-image best cutoff, not a fixed guess).
-        private static bool[,] Binarize(Image<L8> gray)
-        {
-            int w = gray.Width, h = gray.Height;
-            var hist = new int[256];
-            gray.ProcessPixelRows(a => { for (int y = 0; y < h; y++) { var row = a.GetRowSpan(y); for (int x = 0; x < w; x++) hist[row[x].PackedValue]++; } });
-
-            int total = w * h; long sumAll = 0;
-            for (int t = 0; t < 256; t++) sumAll += (long)t * hist[t];
-
-            long sumB = 0; int wB = 0; double maxVar = -1; int thr = 128;
-            for (int t = 0; t < 256; t++)
-            {
-                wB += hist[t]; if (wB == 0) continue;
-                int wF = total - wB; if (wF == 0) break;
-                sumB += (long)t * hist[t];
-                double mB = (double)sumB / wB, mF = (double)(sumAll - sumB) / wF;
-                double v = (double)wB * wF * (mB - mF) * (mB - mF);
-                if (v > maxVar) { maxVar = v; thr = t; }
-            }
-
-            bool bgLight = hist[..thr].Sum() < hist[thr..].Sum();
-            var mask = new bool[h, w];
-            gray.ProcessPixelRows(a => { for (int y = 0; y < h; y++) { var row = a.GetRowSpan(y); for (int x = 0; x < w; x++) { byte v = row[x].PackedValue; mask[y, x] = bgLight ? v < thr : v > thr; } } });
-            return mask;
-        }
-
-        // Dilate then erode — reconnects strokes thresholding split apart (e.g. a broken "8").
         private static bool[,] MorphClose(bool[,] m) => Morph(Morph(m, true), false);
 
         private static bool[,] Morph(bool[,] m, bool dilate)
@@ -144,7 +187,6 @@ namespace SQCScanner.Services
             return o;
         }
 
-        // Drops connected components smaller than minPixels (stray-pixel noise).
         private static bool[,] RemoveSmallComponents(bool[,] mask, int minPixels)
         {
             int h = mask.GetLength(0), w = mask.GetLength(1);
@@ -173,7 +215,6 @@ namespace SQCScanner.Services
             return result;
         }
 
-        // Column-gap segmentation; small gaps merged so a broken glyph = one digit.
         private static List<(int x0, int x1)> SegmentColumns(bool[,] mask, int minGap)
         {
             int h = mask.GetLength(0), w = mask.GetLength(1);
@@ -229,7 +270,6 @@ namespace SQCScanner.Services
             return r;
         }
 
-        // Aspect-ratio-preserving resize onto a fixed, centered canvas.
         private static bool[,] Normalize(bool[,] glyph, int targetW, int targetH)
         {
             int gh = glyph.GetLength(0), gw = glyph.GetLength(1);
@@ -252,8 +292,6 @@ namespace SQCScanner.Services
             return canvas;
         }
 
-        // ---------- matching ----------
-
         private static (char digit, double score) MatchTemplate(bool[,] normalized)
         {
             char best = '?'; double bestScore = -1;
@@ -274,8 +312,6 @@ namespace SQCScanner.Services
             for (int y = 0; y < h; y++) for (int x = 0; x < w; x++) if (a[y, x] == b[y, x]) match++;
             return (double)match / (h * w);
         }
-
-        // ---------- review/debug ----------
 
         private static void SaveForReview(Image<Rgba32> charBox, string tag)
         {

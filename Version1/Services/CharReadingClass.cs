@@ -15,8 +15,8 @@ namespace SQCScanner.Services
         private static readonly string TessDataPath = Path.Combine(AppContext.BaseDirectory, "tessdata");
 
         // Folder where every crop + its preprocessed variants are saved for debugging.
-        //private static readonly string ErrorImageFolder =
-        //    @"D:\Prashant_Devloper\ImageBaseOMR\FrontEnd\OMR_ImageBase_BackEnd_V1\Version1\wFileManager\bulk_scan\Text ERROR";
+        private static readonly string ErrorImageFolder =
+            @"D:\Prashant_Devloper\ImageBaseOMR\FrontEnd\OMR_ImageBase_BackEnd_V1\Version1\wFileManager\bulk_scan\Text ERROR";
 
         public static string ReadChar(Image<Rgba32> charBox)
         {
@@ -27,7 +27,7 @@ namespace SQCScanner.Services
             {
                 // Save the raw crop first — this is what came IN, before any processing.
                 // If this already looks bad, the problem is upstream (cropping), not OCR.
-                //SaveDebugImage(charBox, $"{debugId}_0_original.png");
+                SaveDebugImage(charBox, $"{debugId}_0_original.png");
 
                 if (!Directory.Exists(TessDataPath))
                 {
@@ -98,7 +98,7 @@ namespace SQCScanner.Services
                         var bytes = stream.ToArray();
 
                         // Save EVERY variant Tesseract actually sees — this is the key debug artifact.
-                        //SaveDebugBytes(bytes, $"{debugId}_1_{variantLabel}.png");
+                        SaveDebugBytes(bytes, $"{debugId}_1_{variantLabel}.png");
 
                         using var pix = Pix.LoadFromMemory(bytes);
                         using var page = engine.Process(pix, PageSegMode.SingleChar);
@@ -117,7 +117,7 @@ namespace SQCScanner.Services
                 }
 
                 Console.WriteLine(string.IsNullOrEmpty(bestResult)
-                    ? $"OCR: no digit found for {debugId}. Check saved images in ''."
+                    ? $"OCR: no digit found for {debugId}. Check saved images in '{ErrorImageFolder}'."
                     : $"OCR: '{bestResult}' (confidence {bestConfidence:F1}, best variant: {bestVariantLabel}) for {debugId}.");
 
                 return bestResult;
@@ -129,38 +129,38 @@ namespace SQCScanner.Services
             }
         }
 
-        //private static void SaveDebugImage(Image<Rgba32> image, string fileName)
-        //{
-        //    try
-        //    {
-        //        if (!Directory.Exists(ErrorImageFolder))
-        //        {
-        //            Directory.CreateDirectory(ErrorImageFolder);
-        //        }
+        private static void SaveDebugImage(Image<Rgba32> image, string fileName)
+        {
+            try
+            {
+                if (!Directory.Exists(ErrorImageFolder))
+                {
+                    Directory.CreateDirectory(ErrorImageFolder);
+                }
 
-        //        image.SaveAsPng(Path.Combine(ErrorImageFolder, fileName));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"OCR Error: debug image save karte waqt error aaya: {ex.Message}");
-        //    }
-        //}
+                image.SaveAsPng(Path.Combine(ErrorImageFolder, fileName));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"OCR Error: debug image save karte waqt error aaya: {ex.Message}");
+            }
+        }
 
-        //private static void SaveDebugBytes(byte[] pngBytes, string fileName)
-        //{
-        //    try
-        //    {
-        //        if (!Directory.Exists(ErrorImageFolder))
-        //        {
-        //            Directory.CreateDirectory(ErrorImageFolder);
-        //        }
+        private static void SaveDebugBytes(byte[] pngBytes, string fileName)
+        {
+            try
+            {
+                if (!Directory.Exists(ErrorImageFolder))
+                {
+                    Directory.CreateDirectory(ErrorImageFolder);
+                }
 
-        //        File.WriteAllBytes(Path.Combine(ErrorImageFolder, fileName), pngBytes);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"OCR Error: debug image save karte waqt error aaya: {ex.Message}");
-        //    }
-        //}
+                File.WriteAllBytes(Path.Combine(ErrorImageFolder, fileName), pngBytes);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"OCR Error: debug image save karte waqt error aaya: {ex.Message}");
+            }
+        }
     }
 }
