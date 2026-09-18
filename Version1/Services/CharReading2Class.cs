@@ -20,6 +20,12 @@ namespace SQCScanner.Services
 
         public string ReadAnswerSheetNumber(Image<Rgba32> charBox)
         {
+            string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string downloadsFolder = Path.Combine(userProfile, "Downloads", "TEST_OCR");
+
+            // Unique filename so it doesn't overwrite
+            string fileName = $"Ocr_Processed_{DateTime.Now:yyyyMMdd_HHmmss_fff}.png";
+            string savePath = Path.Combine(downloadsFolder, fileName);
             try
             {
                 // -----------------------------------------
@@ -72,11 +78,11 @@ namespace SQCScanner.Services
                 // 5. Threshold
                 // -----------------------------------------
 
-                using var binary = new Mat();
+                using var binaryInv = new Mat();
 
                 Cv2.Threshold(
                     resized,
-                    binary,
+                    binaryInv,
                     0,
                     255,
                     ThresholdTypes.Binary | ThresholdTypes.Otsu
@@ -85,12 +91,43 @@ namespace SQCScanner.Services
                 // -----------------------------------------
                 // 6. Convert OpenCV Mat -> PNG bytes
                 // -----------------------------------------
-
                 Cv2.ImEncode(
                     ".png",
-                    binary,
+                    binaryInv,
                     out byte[] imageBytes
                 );
+
+
+                // -----------------------------------------
+                // 6A. Number croping AREA 
+                // -----------------------------------------
+
+
+                
+
+
+
+
+                // -----------------------------------------
+                // 6B. Save Image to Downloads Folder
+                // -----------------------------------------
+
+                try
+                {
+                    File.WriteAllBytes(savePath, imageBytes);
+                }
+                catch (Exception saveEx)
+                {
+                    Console.WriteLine($"Failed to save image to Downloads: {saveEx.Message}");
+                }
+
+               
+
+
+
+
+
+
 
                 // -----------------------------------------
                 // 7. Tesseract

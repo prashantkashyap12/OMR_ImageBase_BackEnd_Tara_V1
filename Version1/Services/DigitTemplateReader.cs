@@ -7,8 +7,7 @@ namespace SQCScanner.Services
     {
         private static readonly string TemplateFolder = Path.Combine(AppContext.BaseDirectory, "DigitTemplates");
         private static readonly string UnlabeledFolder = Path.Combine(
-            @"D:\Prashant_Devloper\ImageBaseOMR\FrontEnd\OMR_ImageBase_BackEnd_V1\Version1\wFileManager\bulk_scan\Text ERROR",
-            "Unlabeled");
+            @"D:\Prashant_Devloper\ImageBaseOMR\FrontEnd\OMR_ImageBase_BackEnd_V1\Version1\wFileManager\bulk_scan\Text ERROR");
 
         private const int NormW = 32, NormH = 48, MinComponentPx = 8, MinGapPx = 4;
         private static readonly double MinConfidence = 0.60;
@@ -16,7 +15,7 @@ namespace SQCScanner.Services
         private static readonly object Lock = new();
         private static Dictionary<char, List<bool[,]>>? _templates;
 
-        public static string ReadNumber(Image<Rgba32> charBox)
+        public string ReadNumber(Image<Rgba32> charBox)
         {
             EnsureTemplatesLoaded();
             try

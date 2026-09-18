@@ -32,8 +32,21 @@ namespace SQCScanner.Controllers
             try
             {
                 Image<Rgba32> charBox = await ConvertToRgba32(AttchCrop);
-                var reader = new CharReading2Class();
-                string dataReading = reader.ReadAnswerSheetNumber(charBox);
+
+                //var reader = new CharReading2Class();
+                //string dataReading = reader?.ReadAnswerSheetNumber(charBox);
+                //Console.WriteLine(dataReading);
+
+
+                var reader1 = new DigitTemplateReader();
+                string dataReading = reader1.ReadNumber(charBox);
+                Console.WriteLine(dataReading);
+
+
+                //var reader2 = new CharReadingClass();
+                //string dataReading = reader2.ReadChar(charBox);
+                //Console.WriteLine(dataReading);
+
 
                 return Ok("output ="+dataReading);
             }

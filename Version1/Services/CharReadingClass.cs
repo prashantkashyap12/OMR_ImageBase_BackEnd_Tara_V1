@@ -18,7 +18,7 @@ namespace SQCScanner.Services
         private static readonly string ErrorImageFolder =
             @"D:\Prashant_Devloper\ImageBaseOMR\FrontEnd\OMR_ImageBase_BackEnd_V1\Version1\wFileManager\bulk_scan\Text ERROR";
 
-        public static string ReadChar(Image<Rgba32> charBox)
+        public string ReadChar(Image<Rgba32> charBox)
         {
             // Unique id so all debug images from THIS call group together and sort together.
             string debugId = $"{DateTime.Now:yyyyMMdd_HHmmss_fff}_{Guid.NewGuid():N}".Substring(0, 26);

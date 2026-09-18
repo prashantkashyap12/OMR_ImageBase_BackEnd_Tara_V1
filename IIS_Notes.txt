@@ -1,0 +1,64 @@
+yanshika - 28036
+Kulshetr - 28124
+
+1. Install SQL server (professional Enterprises developer)
+   <check in service SQL Server" is running or not>
+
+2. Install SSMS 
+   1. <when login, select brower> select local> then check into Trust Certificate>
+   2. import DB (Db Script/Import bak file)
+   3. Add user from Application Pool (IIS)
+
+     USE [TaraSir_ImageBase]; GO
+
+     CREATE USER [IIS APPPOOL\ImageBasedOMR]
+     FOR LOGIN [IIS APPPOOL\ImageBasedOMR];
+     GO
+
+     ALTER ROLE [db_datareader] ADD MEMBER [IIS APPPOOL\ImageBasedOMR];
+     ALTER ROLE [db_datawriter] ADD MEMBER [IIS APPPOOL\ImageBasedOMR];
+     GO
+
+     CREATE LOGIN [IIS APPPOOL\ImageBasedOMR]
+     FROM WINDOWS;
+     GO
+     (Login > Security folder > login > Users > IIS APPPOOL\ImageBasedOMR(Exist)
+
+     
+   4. Code se Db me table create karne ki permission dena
+	USE [TaraSir_ImageBase];
+	GO
+	-- 1. Ensure the Windows Login exists on the server (if not already added)
+	IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = N'IIS APPPOOL\ImageBasedOMR')
+	BEGIN
+    	CREATE LOGIN [IIS APPPOOL\ImageBasedOMR] FROM WINDOWS;
+	END
+	GO
+	-- 2. Ensure the user exists in the database
+	IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'IIS APPPOOL\ImageBasedOMR')
+	BEGIN
+    	CREATE USER [IIS APPPOOL\ImageBasedOMR] FOR LOGIN [IIS APPPOOL\ImageBasedOMR];
+	END
+	GO
+	-- 3. Grant table creation permissions
+	GRANT CREATE TABLE TO [IIS APPPOOL\ImageBasedOMR];
+	GO
+	-- SET Permission
+	USE [TaraSir_ImageBase];
+	GO
+
+	-- Grant permission to modify and create objects inside the dbo schema
+	GRANT ALTER ON SCHEMA::dbo TO [IIS APPPOOL\ImageBasedOMR];
+	GO
+	(Check select DB > Security > Users > IIS APPPOOL\ImageBasedOMR(Exist)
+    
+     5. 
+
+3. Install Windows Hosting Server 8.25 but 8.30 fine
+   
+4. Window Firewall to set Global IP can be access from LAN other pc.
+   >> Inbound Rules > 
+      New Rules > Select PORT (Radio Button) Next > TCP, Specific local ports 4100 > Allow the connection > 
+      Domain, Private, Public Next >
+
+

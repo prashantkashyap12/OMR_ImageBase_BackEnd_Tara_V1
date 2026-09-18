@@ -165,7 +165,7 @@ namespace SQCScanner.Controllers
             {
                 using (var _conn = new SqlConnection(_connectionString))
                 {
-                    query = $@"SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME LIKE 'Template_%'";
+                    query = $@"SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME LIKE 'Tem_%'";
                     result = await _conn.QueryAsync<string>(query);
                     var total = 0; query = null;
                     foreach (var data in result)
