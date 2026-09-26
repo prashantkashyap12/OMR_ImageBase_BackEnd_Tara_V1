@@ -63,11 +63,6 @@ namespace SQCScanner.Services
                         state = false,
                     };
                 }
-                //if (File.Exists(imgPath))     // img will be delete as per user desier 
-                //{
-                //    File.Delete(imgPath);
-                //}
-
             }
             catch (Exception ex)
             {

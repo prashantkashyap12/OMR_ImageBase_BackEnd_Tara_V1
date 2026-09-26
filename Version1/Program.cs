@@ -15,6 +15,7 @@ using SixLabors.ImageSharp;
 using SQCScanner.Modal;
 using Serilog;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Http.Features;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,6 +45,19 @@ builder.Services.AddScoped<MargeGenSerivce>();
 builder.Services.AddScoped<EmailSendClass>();
 builder.Services.AddScoped<BravoServices>();
 builder.Services.AddHttpClient();
+
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 3_221_225_472; // 3 GB
+    options.ValueLengthLimit = int.MaxValue;
+    options.MultipartHeadersLengthLimit = int.MaxValue;
+    options.ValueCountLimit = int.MaxValue; 
+});
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.Limits.MaxRequestBodySize = 3_221_225_472; // 3 GB
+});
+
 var configuration = builder.Configuration;
 builder.Services.AddJwtAuthentication(configuration);
 builder.Services.AddControllers();            // Add Base controller.
@@ -93,6 +107,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
+
+
 // Syncfusion Key Add
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXhdcHRVQmVeV0F3Wks=\r\n");
 
@@ -100,7 +116,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQx
 var app = builder.Build();
 
 // Http Routing Redirection
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 // Cross sharing - not specifically
 app.UseCors("AllowAnyOrigin");

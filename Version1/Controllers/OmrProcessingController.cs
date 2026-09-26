@@ -244,9 +244,252 @@ namespace Version1.Controllers
             }
         }
 
+        [RequestSizeLimit(3_221_225_472)]
+        [RequestFormLimits(MultipartBodyLengthLimit = 3_221_225_472,ValueLengthLimit = int.MaxValue,ValueCountLimit = int.MaxValue)]
+        [HttpPost("process-omr2")]
+        public async Task<IActionResult> ProcessOmrSheet2(List<IFormFile> images, string folderPath, string token, int idTemp, bool IsSaveDb, bool failReScan = true)
+        {
+            dynamic resp;
+            _controlService.ResetProcessing();
+
+            // Token handler UserId Extract
+            var jwtToken = new JwtSecurityTokenHandler().ReadJwtToken(token);
+            var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid")?.Value;
+            var userName = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "unique_name")?.Value;
+            var folderPAth = folderPath;
+
+            // Working directory where uploaded images will be saved physically
+            var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wFileManager", folderPath);
+            if (!Directory.Exists(uploadFolder))
+            {
+                Directory.CreateDirectory(uploadFolder);
+            }
+
+            var imageFiles = new List<string>();
+            if (images == null || images.Count == 0)
+            {
+                resp = new
+                {
+                    state = false,
+                    message = "No Files selected. Please select at least one image."
+                };
+                return NotFound(resp);
+            }
+
+            //var allowedExt = new[] { ".jpg", ".jpeg", ".png", ".tif" };
+            //int ser = 0;
+            //var totalCount = JsonSerializer.Serialize(images.Count);
+            //var results = new List<OmrResult>();
+            //foreach (var file in images)
+            //{
+            //    var ext = Path.GetExtension(file.FileName).ToLowerInvariant();
+            //    if (!allowedExt.Contains(ext) || file.Length == 0)
+            //    {
+            //        continue; // skip invalid files
+            //    }
+
+            //    var safeFileName = $"{file.FileName}";                 // avoid name clashes; use file.FileName if you want to preserve original names
+            //    var savedPath = Path.Combine(uploadFolder, safeFileName);
+            //    using (var stream = new FileStream(savedPath, FileMode.Create))
+            //    {
+            //        await file.CopyToAsync(stream);
+            //    }
+
+            //    //imageFiles.Add(savedPath);
+            //    var Targetjson = string.Empty;
+            //    var ReturnDetails = _dbContext.ImgTemplate.FirstOrDefault(x => x.Id == idTemp);
+            //    if (ReturnDetails == null)
+            //    {
+            //        resp = new
+            //        {
+            //            state = false,
+            //            message = "Id is invalid please add Template first"
+            //        };
+            //        return NotFound(resp);
+            //    }
+
+            //    string imageUrl = ReturnDetails.imgPath;
+            //    string templateName = ReturnDetails.FileName;
+            //    imageUrl = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imageUrl);
+
+            //    if (string.IsNullOrEmpty(ReturnDetails.JsonPath))
+            //    {
+            //        resp = new
+            //        {
+            //            state = false,
+            //            message = "Template not found"
+            //        };
+            //        return NotFound(resp);
+            //    }
+
+            //    Targetjson = ReturnDetails.JsonPath.Replace("\\", "/");
+            //    string templatePath = Path.Combine(_env.WebRootPath, Targetjson);
 
 
+            //    var crttb = 1;
 
+            //    ser = ser + 1;
+            //    _controlService.WaitIfPaused();
+            //    if (_controlService.IsStopRequested)
+            //    {
+            //        break;
+            //    }
+
+            //    var res = await _omrService.ProcessOmrSheet(savedPath, templatePath, imageUrl, ser, userName);
+            //    results.Add(res);
+
+
+            //    if (crttb == 1)
+            //    {
+            //        await _recordTable.TableCreation(res, userId, folderPAth, userId, idTemp);
+            //    }
+            //    crttb++;
+
+            //    // 1. Save_Record into DB
+            //    dynamic dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, savedPath, templateName, idTemp);
+
+            //    if (IsSaveDb)
+            //    {
+            //        // 2. Save_Sacanned Img Folder
+            //        var stat = res.Success;
+            //        var SaveRoot = await _imgSave.ScanedSave(Directory.GetCurrentDirectory(), savedPath, idTemp, stat, folderPath, userId);
+            //    }
+
+            //    // 3. WS_Handler
+            //    string jsonResult = JsonSerializer.Serialize(dbRes);
+            //    userId = Convert.ToString(userId);
+            //    await _webSocketHandler.UserMessageAsync(userId, jsonResult);
+            //    if (System.IO.File.Exists(savedPath))
+            //    {
+            //        System.IO.File.Delete(savedPath);
+            //    }
+            //}
+
+            var allowedExt = new[] { ".jpg", ".jpeg", ".png", ".tif" };
+            int ser = 0;
+            var totalCount = JsonSerializer.Serialize(images.Count);
+            var results = new List<OmrResult>();
+
+            foreach (var file in images)
+            {
+                // Strip out any folder paths sent by the browser (e.g., "Folder/image.jpg" becomes "image.jpg")
+                var cleanFileName = Path.GetFileName(file.FileName);
+                var ext = Path.GetExtension(cleanFileName).ToLowerInvariant();
+
+                if (!allowedExt.Contains(ext) || file.Length == 0)
+                {
+                    continue; // skip invalid files
+                }
+
+                // Use clean file name and ensure no double extension
+                var fileNameWithoutExt = Path.GetFileNameWithoutExtension(cleanFileName);
+                var safeFileName = $"{fileNameWithoutExt}{ext}";
+                var savedPath = Path.Combine(uploadFolder, safeFileName);
+
+                // Ensure the target directory physically exists (handles nested paths safely)
+                var fileDirectory = Path.GetDirectoryName(savedPath);
+                if (!Directory.Exists(fileDirectory))
+                {
+                    Directory.CreateDirectory(fileDirectory);
+                }
+
+                using (var stream = new FileStream(savedPath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                // Rest of your processing logic...
+                var Targetjson = string.Empty;
+                var ReturnDetails = _dbContext.ImgTemplate.FirstOrDefault(x => x.Id == idTemp);
+                if (ReturnDetails == null)
+                {
+                    resp = new { state = false, message = "Id is invalid please add Template first" };
+                    return NotFound(resp);
+                }
+
+                string imageUrl = ReturnDetails.imgPath;
+                string templateName = ReturnDetails.FileName;
+                imageUrl = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imageUrl);
+
+                if (string.IsNullOrEmpty(ReturnDetails.JsonPath))
+                {
+                    resp = new { state = false, message = "Template not found" };
+                    return NotFound(resp);
+                }
+
+                Targetjson = ReturnDetails.JsonPath.Replace("\\", "/");
+                string templatePath = Path.Combine(_env.WebRootPath, Targetjson);
+
+                var crttb = 1;
+                ser = ser + 1;
+                _controlService.WaitIfPaused();
+                if (_controlService.IsStopRequested)
+                {
+                    break;
+                }
+
+                var res = await _omrService.ProcessOmrSheet(savedPath, templatePath, imageUrl, ser, userName);
+                results.Add(res);
+
+                if (crttb == 1)
+                {
+                    await _recordTable.TableCreation(res, userId, folderPAth, userId, idTemp);
+                }
+                crttb++;
+
+                dynamic dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, savedPath, templateName, idTemp);
+
+                if (IsSaveDb)
+                {
+                    var stat = res.Success;
+                    var SaveRoot = await _imgSave.ScanedSave(Directory.GetCurrentDirectory(), savedPath, idTemp, stat, folderPath, userId);
+                }
+
+                string jsonResult = JsonSerializer.Serialize(dbRes);
+                userId = Convert.ToString(userId);
+                await _webSocketHandler.UserMessageAsync(userId, jsonResult);
+                try
+                {
+                    if (System.IO.File.Exists(savedPath))
+                    {
+                        System.IO.File.Delete(savedPath);
+                    }
+                }
+                catch (IOException)
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+
+                    try
+                    {
+                        if (System.IO.File.Exists(savedPath))
+                        {
+                            System.IO.File.Delete(savedPath);
+                        }
+                    }
+                    catch
+                    {
+                        // Ignore or log if it still fails; background cleanup tasks can handle it later if needed
+                    }
+                }
+            }
+
+            // 
+            await _webSocketHandler.UserMessageAsync(userId, totalCount);
+            await _webSocketHandler.UserMessageAsync(userId, "");
+
+            // Download CSV 
+            var jsonString = JsonSerializer.Serialize(results);
+            var csvBytes = Encoding.UTF8.GetBytes(jsonString);
+            resp = new
+            {
+                state = true,
+                record = results,
+                csv = csvBytes
+            };
+
+            return Ok(resp);
+        }
 
         // Data Push procesing
         [HttpPost("pause-processing")]
@@ -372,6 +615,21 @@ namespace Version1.Controllers
         }
 
 
+        [RequestSizeLimit(3_221_225_472)]
+        [RequestFormLimits(MultipartBodyLengthLimit = 3_221_225_472, ValueLengthLimit = int.MaxValue, ValueCountLimit = int.MaxValue)]
+        [HttpPost("mobileImageQC")]
+        public async Task<IActionResult> mobileImageQC(List <IFormFile> InsertImage)
+        {
+            dynamic res;
+            try {
+
+       
+            }
+            catch(Exception ex) {
+                
+            }
+            return Ok();
+        }
 
     }
 }
