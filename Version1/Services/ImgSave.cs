@@ -53,6 +53,7 @@ namespace SQCScanner.Services
                     {
                         message = "File Save Into TemplateWise n FolderName",
                         state = true,
+                        imagepath = folderPathMain
                     };
                 }
                 else
@@ -61,6 +62,7 @@ namespace SQCScanner.Services
                     {
                         message = "Already File Save Into TemplateWise n FolderName.",
                         state = false,
+                        imagepath = folderPathMain
                     };
                 }
             }

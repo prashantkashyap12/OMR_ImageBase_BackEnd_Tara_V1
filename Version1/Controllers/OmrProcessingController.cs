@@ -439,13 +439,31 @@ namespace Version1.Controllers
 
                 dynamic dbRes = await _SaveOnly.RecordSaveVal(res, idTemp, userName, userId, IsSaveDb, folderPAth, savedPath, templateName, idTemp);
 
+                string updatepath = "";
                 if (IsSaveDb)
                 {
                     var stat = res.Success;
                     var SaveRoot = await _imgSave.ScanedSave(Directory.GetCurrentDirectory(), savedPath, idTemp, stat, folderPath, userId);
+                    Console.WriteLine(SaveRoot);
+
+                    var jsonResult1 = SaveRoot as JsonResult;
+                    dynamic resultValue = jsonResult1.Value;
+                    var imagePath = resultValue.imagepath;
+                    updatepath = imagePath.Substring(imagePath.IndexOf(@"wFileManager", StringComparison.OrdinalIgnoreCase)).Replace("/", "\\");
                 }
 
+
+                foreach (var data in dbRes)
+                {
+                    if (data.Key == "FileName")
+                    {
+                        dbRes[data.Key] = updatepath;
+                    }
+                }
+
+
                 string jsonResult = JsonSerializer.Serialize(dbRes);
+                Console.WriteLine(jsonResult);
                 userId = Convert.ToString(userId);
                 await _webSocketHandler.UserMessageAsync(userId, jsonResult);
                 try
